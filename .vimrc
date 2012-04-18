@@ -34,8 +34,6 @@ map <CR> o<Esc>k
 let mapleader = ","
 let g:mapleader = ","
 
-set wildchar=<Tab> wildmenu wildmode=full
-
 "Highlight Lines over 80 characters long
 if exists('+colorcolumn')
   set colorcolumn=80
@@ -71,3 +69,17 @@ vnoremap <silent> # :<C-U>
   \gvy?<C-R><C-R>=substitute(
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
+
+"NerdTree Helper Function
+function! OpenOrFocusNERDTree ()
+  if exists('t:NERDTreeBufName')
+    NERDTreeFocus
+  else
+    NERDTreeToggle
+  endif
+endfunction
+:map <silent> <F2> :call OpenOrFocusNERDTree()<CR>
+
+"Buffer Stuffs
+nnoremap <F3> :buffers<CR>:buffer<Space>
+set wildchar=<Tab> wildmenu wildmode=full
