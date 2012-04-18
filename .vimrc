@@ -9,7 +9,7 @@ set et
 set virtualedit=onemore  "Allow for cursor beyond last character
 set nowrap               "Wrap long lines
 set history=1000         "Store lots of history
-set ttyfast              
+"set ttyfast              
 set autoread             "Set to auto read when a file is changed from the outside
 set cmdheight=2          
 set incsearch            "Make search act like search in modern browsers
@@ -17,12 +17,13 @@ set nu
 set cursorline
 set showcmd
 syntax on
+filetype plugin on
 set gfn=MonoSpace\ 8
 set ignorecase 
 set smartcase
 set noerrorbells
-set background=dark      "For solorize color scheme
-colorscheme solarized
+"set background=light      "For solorize color scheme
+colorscheme elflord
 
 "Insert space under the cursor
 map <space> i<space><Esc> 
@@ -70,7 +71,7 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
-"NerdTree Helper Function
+"NerdTree
 function! OpenOrFocusNERDTree ()
   if exists('t:NERDTreeBufName')
     NERDTreeFocus
@@ -83,3 +84,9 @@ endfunction
 "Buffer Stuffs
 nnoremap <F3> :buffers<CR>:buffer<Space>
 set wildchar=<Tab> wildmenu wildmode=full
+
+"Gundo
+nnoremap <F5> :GundoToggle<CR>
+
+"Tagbar
+nnoremap <silent> <F9> :TagbarToggle<CR>

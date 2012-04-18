@@ -40,3 +40,6 @@
 [submodule ".vim/bundle/tabular"]
 	path = .vim/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
+[submodule ".vim/bundle/vcscomand"]
+	path = .vim/bundle/vcscomand
+	url = git://repo.or.cz/vcscommand
