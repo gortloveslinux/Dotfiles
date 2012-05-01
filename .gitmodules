@@ -43,3 +43,9 @@
 [submodule ".vim/bundle/vcscomand"]
 	path = .vim/bundle/vcscomand
 	url = git://repo.or.cz/vcscommand
+[submodule ".vim/bundle/zenburn"]
+	path = .vim/bundle/zenburn
+	url = git://github.com/vim-scripts/Zenburn.git
+[submodule ".vim/bundle/smyck-colorscheme"]
+	path = .vim/bundle/smyck-colorscheme
+	url = git://github.com/hukl/Smyck-Color-Scheme.git
