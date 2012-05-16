@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/smyck-colorscheme"]
 	path = .vim/bundle/smyck-colorscheme
 	url = git://github.com/hukl/Smyck-Color-Scheme.git
+[submodule ".vim/bundle/phpdoc"]
+	path = .vim/bundle/phpdoc
+	url = git://github.com/h2rd/vim-phpdoc.git

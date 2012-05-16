@@ -2,35 +2,27 @@ runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
+set nobackup writebackup 
 set nocompatible
 set tabstop=2
 set sw=2
 set et
 set virtualedit=onemore  "Allow for cursor beyond last character
-set nowrap               "Wrap long lines
+set nowrap               "Don't Wrap long lines
 set history=1000         "Store lots of history
-"set ttyfast              
 set autoread             "Set to auto read when a file is changed from the outside
 set cmdheight=2          
 set incsearch            "Make search act like search in modern browsers
 set nu
-set cursorline
 set showcmd
 syntax on
 filetype plugin on
 set gfn=MonoSpace\ 8
+
 set ignorecase 
 set smartcase
 set noerrorbells
-"set background=light      "For solorize color scheme
-colorscheme elflord
-
-"Insert space under the cursor
-map <space> i<space><Esc> 
-
-"Insert newline under/above current line
-map <S-CR> O<Esc>j
-map <CR> o<Esc>k
+colorscheme smyck
 
 let mapleader = ","
 let g:mapleader = ","
@@ -42,22 +34,13 @@ else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
-"Easier moving in tabs and windows
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-map <C-L> <C-W>l<C-W>_
-map <C-H> <C-W>h<C-W>_
-map <C-K> <C-W>k<C-W>_
-
-"Wrapped lines goes down/up to next row, rather than next line in file.
-nnoremap j gj
-nnoremap k gk
-
-"Visual shifting (does not exit Visual mode)
-vnoremap < <gv
-vnoremap > >gv 
-
-map <leader>ss :setlocal spell!<cr>
+"PhpDocStuff
+let g:pdv_cfg_Type = "mixed"
+let g:pdv_cfg_Package = ""
+let g:pdv_cfg_Version = "$Id$"
+let g:pdv_cfg_Author = "Chris Edwards <cme@kount.com>"
+let g:pdv_cfg_Copyright = "copyright 2012 Kount Inc."
+let g:pdv_cfg_License = ""
 
 "Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
@@ -71,6 +54,21 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
+"Swapping Splits - http://od-eon.com/blogs/kaunghtet/vim-working-multiple-split-windows/
+function! MarkWindowSwap()
+    let g:markedWinNum = winnr()
+endfunction
+
+function! DoWindowSwap()
+    let curNum = winnr()
+    let curBuf = bufnr( "%" )
+    exe g:markedWinNum . "wincmd w"
+    let markedBuf = bufnr( "%" )    
+    exe 'hide buf' curBuf
+    exe curNum . "wincmd w"
+    exe 'hide buf' markedBuf
+endfunction
+
 "NerdTree
 function! OpenOrFocusNERDTree ()
   if exists('t:NERDTreeBufName')
@@ -79,14 +77,27 @@ function! OpenOrFocusNERDTree ()
     NERDTreeToggle
   endif
 endfunction
-:map <silent> <F2> :call OpenOrFocusNERDTree()<CR>
 
 "Buffer Stuffs
-nnoremap <F3> :buffers<CR>:buffer<Space>
 set wildchar=<Tab> wildmenu wildmode=full
 
-"Gundo
-nnoremap <F5> :GundoToggle<CR>
-
-"Tagbar
-nnoremap <silent> <F9> :TagbarToggle<CR>
+"Keys Maps
+  nmap <leader>vs :vert sb<space>
+  map <silent> <F9> :TagbarOpen j<CR>
+  map <F3> :buffers<CR>:buffer<Space>
+  map <F5> :GundoToggle<CR>
+  map <silent> <F2> :call OpenOrFocusNERDTree()<CR>
+  nnoremap <space> i <Esc> 
+  nmap <S-CR> O<Esc>j
+  nmap <CR> o<Esc>k
+  nmap <leader>ss :setlocal spell!<cr>
+  nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
+  nmap <silent> <leader>pw :call DoWindowSwap()<CR>
+  "Easier moving in tabs and windows
+  map <C-J> <C-W>j
+  map <C-K> <C-W>k
+  map <C-L> <C-W>l
+  map <C-H> <C-W>h
+  "Visual shifting (does not exit Visual mode)
+  vnoremap < <gv
+  vnoremap > >gv 
