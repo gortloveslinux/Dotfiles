@@ -81,6 +81,9 @@ endfunction
 "Buffer Stuffs
 set wildchar=<Tab> wildmenu wildmode=full
 
+"Syntastic
+let g:syntastic_enable_balloons = 1
+
 "Keys Maps
   nmap <leader>vs :vert sb<space>
   map <silent> <F9> :TagbarOpen j<CR>
