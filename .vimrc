@@ -96,6 +96,7 @@ let g:syntastic_enable_balloons = 1
   nmap <leader>ss :setlocal spell!<cr>
   nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
   nmap <silent> <leader>pw :call DoWindowSwap()<CR>
+  nmap <leader>r :s/<C-r><C-w>//g<Left><Left>
   "Easier moving in tabs and windows
   map <C-J> <C-W>j
   map <C-K> <C-W>k

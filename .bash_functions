@@ -1,8 +1,9 @@
 #! /bin/bash
 funcdir=.bash_functions.d
-
-if [ -d "$funcdir" ]; then
-  for i in $(find `pwd`/$funcdir -type f); do
+curdir=$(pwd)
+sourcedir=$(readlink "${curdir}/${funcdir}")
+if [ -d "$sourcedir" ]; then
+  for i in $(find $sourcedir -type f); do
     . $i
   done
 fi
