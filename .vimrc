@@ -81,6 +81,9 @@ endfunction
 "Buffer Stuffs
 set wildchar=<Tab> wildmenu wildmode=full
 
+"CSApprox
+set t_Co=256
+
 "Syntastic
 let g:syntastic_enable_balloons = 1
 
