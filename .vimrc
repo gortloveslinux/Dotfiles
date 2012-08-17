@@ -6,6 +6,7 @@ set nobackup writebackup
 set nocompatible
 set tabstop=2
 set sw=2
+set expandtab
 set et
 set virtualedit=onemore  "Allow for cursor beyond last character
 set nowrap               "Don't Wrap long lines
@@ -87,6 +88,10 @@ set t_Co=256
 "Syntastic
 let g:syntastic_enable_balloons = 1
 
+"Indent Guides
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+
 "Keys Maps
   nmap <leader>vs :vert sb<space>
   map <silent> <F9> :TagbarOpen j<CR>
@@ -108,3 +113,4 @@ let g:syntastic_enable_balloons = 1
   "Visual shifting (does not exit Visual mode)
   vnoremap < <gv
   vnoremap > >gv 
+

@@ -1,3 +1,45 @@
+!colours for hybrid.vim (copied from Tomorrow-Night)
+#define t_background #1d1f21
+#define t_current_line #282a2e
+#define t_selection #373b41
+#define t_foreground #c5c8c6
+#define t_comment #969896
+#define t_red #cc6666
+#define t_orange #de935f
+#define t_yellow #f0c674
+#define t_green #b5bd68
+#define t_aqua #8abeb7
+#define t_blue #81a2be
+#define t_purple #b294bb
+
+! terminal colours
+*background: t_background
+*foreground: t_comment
+! black
+*color0: t_current_line
+*color8: t_selection
+! red
+*color1: #A54242
+*color9: t_red
+! green
+*color2: #8C9440
+*color10: t_green
+! yellow
+*color3: t_orange
+*color11: t_yellow
+! blue
+*color4: #5F819D
+*color12: t_blue
+! magenta
+*color5: #85678F
+*color13: t_purple
+! cyan
+*color6: #5E8D87
+*color14: t_aqua
+! white
+*color7: t_comment
+*color15: t_foregroundi
+
 !! drop in Solarized colorscheme for Xresources/Xdefaults
 
 !!SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
@@ -19,59 +61,59 @@
 !!cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
 !!green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
 
-#define S_base03        #002b36
-#define S_base02        #073642
-#define S_base01        #586e75
-#define S_base00        #657b83
-#define S_base0         #839496
-#define S_base1         #93a1a1
-#define S_base2         #eee8d5
-#define S_base3         #fdf6e3
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #859900
+! #define S_base03        #002b36
+! #define S_base02        #073642
+! #define S_base01        #586e75
+! #define S_base00        #657b83
+! #define S_base0         #839496
+! #define S_base1         #93a1a1
+! #define S_base2         #eee8d5
+! #define S_base3         #fdf6e3
+! #define S_yellow        #b58900
+! #define S_orange        #cb4b16
+! #define S_red           #dc322f
+! #define S_magenta       #d33682
+! #define S_violet        #6c71c4
+! #define S_blue          #268bd2
+! #define S_cyan          #2aa198
+! #define S_green         #859900
+! 
+! *background:            S_base03
+! *foreground:            S_base00
+! *fading:                40
+! *fadeColor:             S_base03
+! *cursorColor:           S_base1
+! *pointerColorBackground:S_base01
+! *pointerColorForeground:S_base1
+! 
+! !! black dark/light
+! *color0:                S_base02
+! *color8:                S_base03
+! 
+! !! red dark/light
+! *color1:                S_red
+! *color9:                S_orange
 
-*background:            S_base03
-*foreground:            S_base00
-*fading:                40
-*fadeColor:             S_base03
-*cursorColor:           S_base1
-*pointerColorBackground:S_base01
-*pointerColorForeground:S_base1
+! !! green dark/light
+! *color2:                S_green
+! *color10:               S_base01
 
-!! black dark/light
-*color0:                S_base02
-*color8:                S_base03
+! !! yellow dark/light
+! *color3:                S_yellow
+! *color11:               S_base00
 
-!! red dark/light
-*color1:                S_red
-*color9:                S_orange
+! !! blue dark/light
+! *color4:                S_blue
+! *color12:               S_base0
 
-!! green dark/light
-*color2:                S_green
-*color10:               S_base01
+! !! magenta dark/light
+! *color5:                S_magenta
+! *color13:               S_violet
 
-!! yellow dark/light
-*color3:                S_yellow
-*color11:               S_base00
+! !! cyan dark/light
+! *color6:                S_cyan
+! *color14:               S_base1
 
-!! blue dark/light
-*color4:                S_blue
-*color12:               S_base0
-
-!! magenta dark/light
-*color5:                S_magenta
-*color13:               S_violet
-
-!! cyan dark/light
-*color6:                S_cyan
-*color14:               S_base1
-
-!! white dark/light
-*color7:                S_base2
-*color15:               S_base3
+! !! white dark/light
+! *color7:                S_base2
+! *color15:               S_base3

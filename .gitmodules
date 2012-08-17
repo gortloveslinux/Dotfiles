@@ -77,3 +77,12 @@
 [submodule ".vim/bundle/hybrid-color"]
 	path = .vim/bundle/hybrid-color
 	url = https://github.com/w0ng/vim-hybrid.git
+[submodule ".vim/bundle/command-t"]
+	path = .vim/bundle/command-t
+	url = git://git.wincent.com/command-t.git
+[submodule ".vim/bundle/itchy"]
+	path = .vim/bundle/itchy
+	url = https://github.com/programble/itchy.vim.git
+[submodule ".vim/bundle/vim-indent-guides"]
+	path = .vim/bundle/vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git
