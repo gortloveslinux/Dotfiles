@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/usr/share/vim/vim72'
-let g:netrw_dirhist_2='/usr/share/vim/vim72/autoload'
-let g:netrw_dirhist_3='/home/cme/dev/dotfiles.new/.vim/bundle/gundo/autoload'
-let g:netrw_dirhist_4='/home/cme/dev/dotfiles.new/.vim/bundle/tabular'
-let g:netrw_dirhist_5='/etc/bash_completion.d'
