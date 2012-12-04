@@ -62,10 +62,6 @@
 	path = .vim/bundle/zenburn
 	url = git://github.com/vim-scripts/Zenburn.git
     ignore = dirty
-[submodule ".vim/bundle/smyck-colorscheme"]
-	path = .vim/bundle/smyck-colorscheme
-	url = git://github.com/hukl/Smyck-Color-Scheme.git
-    ignore = dirty
 [submodule ".vim/bundle/phpdoc"]
 	path = .vim/bundle/phpdoc
 	url = git://github.com/h2rd/vim-phpdoc.git
@@ -85,10 +81,6 @@
 [submodule ".vim/bundle/itchy"]
 	path = .vim/bundle/itchy
 	url = https://github.com/programble/itchy.vim.git
-    ignore = dirty
-[submodule ".vim/bundle/vim-indent-guides"]
-	path = .vim/bundle/vim-indent-guides
-	url = https://github.com/nathanaelkane/vim-indent-guides.git
     ignore = dirty
 [submodule ".vim/bundle/powerline"]
 	path = .vim/bundle/powerline

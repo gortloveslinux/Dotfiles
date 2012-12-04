@@ -1,9 +1,9 @@
+set nocompatible
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
 set nobackup writebackup 
-set nocompatible
 set tabstop=2
 set sw=2
 set expandtab
@@ -24,7 +24,6 @@ set laststatus=2
 set ignorecase 
 set smartcase
 set noerrorbells
-colorscheme smyck
 
 let mapleader = ","
 let g:mapleader = ","
