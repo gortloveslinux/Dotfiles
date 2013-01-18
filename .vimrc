@@ -3,6 +3,7 @@ runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
+set mouse=a
 set nobackup writebackup 
 set tabstop=2
 set sw=2

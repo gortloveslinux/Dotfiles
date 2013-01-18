@@ -9,4 +9,6 @@
 # custom helper functions and environment variables
 [[ -f ~/.bash_functions ]] && source ~/.bash_functions
 
+[[ -f ~/.Xresources ]] && xrdb ~/.Xresources
+
 PATH=~/bin:$PATH
