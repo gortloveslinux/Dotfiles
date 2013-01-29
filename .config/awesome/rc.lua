@@ -3,13 +3,12 @@ require("awful.autofocus")
 require("awful.rules")
 require("beautiful")
 require("naughty")
-require("debian.menu")
-
-awful.util.spawn_with_shell("wmname LG3D")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
+config_dir = ("/home/cme/.config/awesome")
+themes_dir = (config_dir .. "/themes")
+beautiful.init(themes_dir .. "/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
@@ -60,7 +59,6 @@ myawesomemenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "Debian", debian.menu.Debian_menu.Debian },
                                     { "open terminal", terminal }
                                   }
                         })
@@ -217,8 +215,6 @@ globalkeys = awful.util.table.join(
                   awful.util.eval, nil,
                   awful.util.getdir("cache") .. "/history_eval")
               end)
-    -- Personal
-    awful.key({ modkey, }, "q", function () run_or_raise("gnome-screensaver-command --lock", { name = "Lock Screen" }) end)
 )
 
 clientkeys = awful.util.table.join(
