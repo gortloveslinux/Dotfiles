@@ -14,7 +14,7 @@ white = "#ffffff"
 
 theme = {}
 
-theme.wallpaper_cmd = { "awsetbg /home/cme/.config/awesome/themes/powerarrow/wallpapers/wall01.jpg" }
+gears.wallpaper.maximized("/home/chris/.config/awesome/themes/powerarrow/wallpapers/wall01.jpg")
 
 theme.font                                  = "Terminus 9"
 theme.fg_normal                             = "#AAAAAA"
