@@ -21,6 +21,7 @@ syntax on
 filetype plugin on
 set gfn=MonoSpace\ 8
 set laststatus=2
+colorscheme desert
 
 set ignorecase 
 set smartcase
@@ -82,9 +83,6 @@ endfunction
 
 "Buffer Stuffs
 set wildchar=<Tab> wildmenu wildmode=full
-
-"CSApprox
-set t_Co=256
 
 "Syntastic
 let g:syntastic_enable_balloons=1
