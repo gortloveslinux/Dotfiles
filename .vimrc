@@ -21,6 +21,7 @@ syntax on
 filetype plugin on
 set gfn=MonoSpace\ 8
 set laststatus=2
+set term=xterm-256color
 colorscheme desert
 
 set ignorecase 
@@ -86,11 +87,6 @@ set wildchar=<Tab> wildmenu wildmode=full
 
 "Syntastic
 let g:syntastic_enable_balloons=1
-
-"Indent Guides
-let g:indent_guides_guide_size=1
-let g:indent_guides_start_level=2
-let g:indent_guides_enable_on_vim_startup=1
 
 "Powerline
 let g:Powerline_stl_path_style = 'full' 
