@@ -3,7 +3,10 @@
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
+PATH=~/bin:$PATH
+
 # get ma aliases
 [[ -f ~/.bash_aliases ]] && source ~/.bash_aliases
 
-PATH=~/bin:$PATH
+# Load functions
+[[ -f ~/bin/to/to.sh ]] && source ~/bin/to/to.sh
