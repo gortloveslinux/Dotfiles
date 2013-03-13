@@ -81,3 +81,6 @@
 [submodule ".vim/bundle/desert"]
 	path = .vim/bundle/desert
 	url = https://github.com/fugalh/desert.vim.git
+[submodule "bin/to"]
+	path = bin/to
+	url = https://github.com/resultsreturned/to.git

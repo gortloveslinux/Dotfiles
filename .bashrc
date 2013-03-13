@@ -6,9 +6,4 @@
 # get ma aliases
 [[ -f ~/.bash_aliases ]] && source ~/.bash_aliases
 
-# custom helper functions and environment variables
-[[ -f ~/.bash_functions ]] && source ~/.bash_functions
-
-[[ -f ~/.Xresources ]] && xrdb ~/.Xresources
-
 PATH=~/bin:$PATH
