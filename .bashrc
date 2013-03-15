@@ -10,3 +10,4 @@ PATH=~/bin:$PATH
 
 # Load functions
 [[ -f ~/bin/to/to.sh ]] && source ~/bin/to/to.sh
+[[ -f ~/bin/functions.sh ]] && source ~/bin/functions.sh
