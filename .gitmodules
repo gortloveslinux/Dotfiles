@@ -90,3 +90,6 @@
 	path = .vim/bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
     ignore = dirty
+[submodule ".vim/bundle/vim-bad-whitespace"]
+	path = .vim/bundle/vim-bad-whitespace
+	url = https://github.com/bitc/vim-bad-whitespace.git
