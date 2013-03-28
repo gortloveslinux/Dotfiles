@@ -1,0 +1,36 @@
+[global_config]
+  title_receive_bg_color = "#a3b9c9"
+  title_transmit_bg_color = "#f1f1f1"
+  title_transmit_fg_color = "#000000"
+[keybindings]
+  go_left = <Shift><Control>h
+  go_down = <Shift><Control>j
+  go_right = <Shift><Control>l
+  go_up = <Shift><Control>k
+[profiles]
+  [[hush]]
+    palette = "#2e3436:#d60027:#285c32:#918f00:#001691:#610185:#008c83:#d3d7cf:#555753:#e895a4:#b0d1b6:#fffe70:#8997e8:#ad7fa8:#91e6e0:#ffffff"
+    use_system_font = False
+    foreground_color = "#000000"
+    icon_bell = False
+    font = DejaVu Sans Mono 10
+    background_color = "#f1f1f1"
+    scrollback_infinite = True
+  [[default]]
+    palette = "#000000:#cca5a5:#8b9a7d:#c4bd9f:#bacee6:#78647b:#7d9a9a:#d3d7cf:#555753:#ffcfcf:#e8ffcf:#fffacf:#cfe7ff:#ffcffb:#cfffff:#fffffd"
+    background_darkness = 0.93
+    use_system_font = False
+    foreground_color = "#ffffff"
+    custom_command = /usr/bin/zsh
+    font = Andale Mono 9
+    background_color = "#484848"
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
