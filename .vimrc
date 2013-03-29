@@ -4,7 +4,7 @@ call pathogen#infect()
 call pathogen#helptags()
 
 set mouse=a
-set nobackup writebackup 
+set nobackup writebackup
 set tabstop=2
 set sw=2
 set expandtab
@@ -13,7 +13,7 @@ set virtualedit=onemore  "Allow for cursor beyond last character
 set nowrap               "Don't Wrap long lines
 set history=1000         "Store lots of history
 set autoread             "Set to auto read when a file is changed from the outside
-set cmdheight=2          
+set cmdheight=2
 set incsearch            "Make search act like search in modern browsers
 set nu
 set showcmd
@@ -23,8 +23,11 @@ set gfn=MonoSpace\ 8
 set laststatus=2
 set term=xterm-256color
 colorscheme desert
+set guioptions-=m       "remove menu bar
+set guioptions-=T       "remove toolbar
+set guioptions-=r       "remove right-hand scroll bar
 
-set ignorecase 
+set ignorecase
 set smartcase
 set noerrorbells
 
@@ -43,7 +46,7 @@ let g:pdv_cfg_Type = "mixed"
 let g:pdv_cfg_Package = ""
 let g:pdv_cfg_Version = "$Id$"
 let g:pdv_cfg_Author = "Chris Edwards <cme@kount.com>"
-let g:pdv_cfg_Copyright = "copyright 2012 Kount Inc."
+let g:pdv_cfg_Copyright = "copyright 2013 Kount Inc."
 let g:pdv_cfg_License = ""
 
 "Search for selected text, forwards or backwards.
@@ -67,7 +70,7 @@ function! DoWindowSwap()
     let curNum = winnr()
     let curBuf = bufnr( "%" )
     exe g:markedWinNum . "wincmd w"
-    let markedBuf = bufnr( "%" )    
+    let markedBuf = bufnr( "%" )
     exe 'hide buf' curBuf
     exe curNum . "wincmd w"
     exe 'hide buf' markedBuf
@@ -89,7 +92,7 @@ set wildchar=<Tab> wildmenu wildmode=full
 let g:syntastic_enable_balloons=1
 
 "Powerline
-let g:Powerline_stl_path_style = 'full' 
+let g:Powerline_stl_path_style = 'full'
 
 "Keys Maps
   nmap <leader>vs :vert sb<space>
@@ -97,7 +100,7 @@ let g:Powerline_stl_path_style = 'full'
   map <F3> :buffers<CR>:buffer<Space>
   map <F5> :GundoToggle<CR>
   map <silent> <F2> :call OpenOrFocusNERDTree()<CR>
-  nnoremap <space> i <Esc> 
+  nnoremap <space> i <Esc>
   nmap <S-CR> O<Esc>j
   nmap <CR> o<Esc>k
   nmap <leader>ss :setlocal spell!<cr>
@@ -111,4 +114,4 @@ let g:Powerline_stl_path_style = 'full'
   map <C-H> <C-W>h
   "Visual shifting (does not exit Visual mode)
   vnoremap < <gv
-  vnoremap > >gv 
+  vnoremap > >gv
