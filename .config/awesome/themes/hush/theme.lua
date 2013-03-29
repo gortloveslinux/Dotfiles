@@ -9,7 +9,7 @@ config = awful.util.getdir("config")
 themes = config .. "/themes"
 themename = "/hush"
 themedir = themes .. themename
-
+assets = themedir .. "/assets"
 wallpaper = themedir .. "/grid.png"
 
 
@@ -98,7 +98,7 @@ theme.layout_tiletop = "/usr/share/awesome/themes/default/layouts/tiletopw.png"
 theme.layout_spiral  = "/usr/share/awesome/themes/default/layouts/spiralw.png"
 theme.layout_dwindle = "/usr/share/awesome/themes/default/layouts/dwindlew.png"
 
-theme.awesome_icon = "/usr/share/awesome/icons/awesome16.png"
+theme.awesome_icon = assets .. "/menu-dot16.png"
 
 return theme
 -- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:encoding=utf-8:textwidth=80
