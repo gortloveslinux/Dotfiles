@@ -40,6 +40,8 @@ theme.border_marked = "#91231c"
 --theme.taglist_bg_focus = "#ff0000"
 
 -- Display the taglist squares
+theme.taglist_bg_focus = "#f1f1f1"
+theme.taglist_fg_focus = "#aaaaaa"
 theme.taglist_squares_sel   = "/usr/share/awesome/themes/default/taglist/squarefw.png"
 theme.taglist_squares_unsel = "/usr/share/awesome/themes/default/taglist/squarew.png"
 
@@ -101,4 +103,3 @@ theme.layout_dwindle = "/usr/share/awesome/themes/default/layouts/dwindlew.png"
 theme.awesome_icon = assets .. "/menu-dot16.png"
 
 return theme
--- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:encoding=utf-8:textwidth=80
