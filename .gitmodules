@@ -6,10 +6,6 @@
 	path = pathogen
 	url = git://github.com/tpope/vim-pathogen.git
     ignore = dirty
-[submodule ".vim/bundle/vimux"]
-	path = .vim/bundle/vimux
-	url = git://github.com/benmills/vimux.git
-    ignore = dirty
 [submodule ".vim/bundle/pathogen"]
 	path = .vim/bundle/pathogen
 	url = git://github.com/tpope/vim-pathogen.git
@@ -33,10 +29,6 @@
 [submodule ".vim/bundle/delimitMate"]
 	path = .vim/bundle/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
-    ignore = dirty
-[submodule ".vim/bundle/gundo"]
-	path = .vim/bundle/gundo
-	url = git://github.com/vim-scripts/Gundo.git
     ignore = dirty
 [submodule ".vim/bundle/tabular"]
 	path = .vim/bundle/tabular
@@ -62,10 +54,6 @@
 	path = .vim/bundle/itchy
 	url = https://github.com/programble/itchy.vim.git
     ignore = dirty
-[submodule ".vim/bundle/powerline"]
-	path = .vim/bundle/powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
-    ignore = dirty
 [submodule ".vim/bundle/vim-coffee-script"]
 	path = .vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
@@ -77,10 +65,6 @@
 [submodule ".vim/bundle/vim-easymotion"]
 	path = .vim/bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
-    ignore = dirty
-[submodule ".vim/bundle/desert"]
-	path = .vim/bundle/desert
-	url = https://github.com/fugalh/desert.vim.git
     ignore = dirty
 [submodule "bin/to"]
 	path = bin/to

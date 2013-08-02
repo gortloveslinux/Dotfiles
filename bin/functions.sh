@@ -1,7 +1,3 @@
-function cl {
-  cd "$*" && ls
-}
-
 function rainbow-road {
   i=$(( 1 ))
   tail -f ${@} | while read line; do

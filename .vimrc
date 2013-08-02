@@ -3,80 +3,79 @@ runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
-set mouse=a
-set nobackup writebackup
-set tabstop=2
-set sw=2
-set expandtab
-set et
-set virtualedit=onemore  "Allow for cursor beyond last character
-set nowrap               "Don't Wrap long lines
-set history=1000         "Store lots of history
-set autoread             "Set to auto read when a file is changed from the outside
-set cmdheight=2
-set incsearch            "Make search act like search in modern browsers
-set nu
-set showcmd
-syntax on
-filetype plugin on
-set gfn=MonoSpace\ 8
-set laststatus=2
-set term=xterm-256color
-colorscheme desert
-set guioptions-=m       "remove menu bar
-set guioptions-=T       "remove toolbar
-set guioptions-=r       "remove right-hand scroll bar
-
+"==
+" Settings
+"==
 set ignorecase
 set smartcase
 set noerrorbells
-
+set expandtab
+set nowrap
+set autoread
+set incsearch
+set nu
+set tabstop=2
+set sw=2
+set history=1000
+set gfn=MonoSpace\ 8
+set term=xterm-256color
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set wildchar=<Tab> wildmenu wildmode=full
+syntax on
+filetype plugin on
 let mapleader = ","
 let g:mapleader = ","
+call matchadd('ErrorMsg', '\%81v', 100) "Highlight Lines over 80 characters long
 
-"Highlight Lines over 80 characters long
-if exists('+colorcolumn')
-  set colorcolumn=80
-else
-  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
-endif
 
-"PhpDocStuff
-let g:pdv_cfg_Type = "mixed"
-let g:pdv_cfg_Package = ""
-let g:pdv_cfg_Version = "$Id$"
-let g:pdv_cfg_Author = "Chris Edwards <cme@kount.com>"
-let g:pdv_cfg_Copyright = "copyright 2013 Kount Inc."
-let g:pdv_cfg_License = ""
+"==
+" Plugin Settings
+"==
+let g:syntastic_enable_balloons=1
 
-"Search for selected text, forwards or backwards.
-vnoremap <silent> * :<C-U>
-  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-  \gvy/<C-R><C-R>=substitute(
-  \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-  \gV:call setreg('"', old_reg, old_regtype)<CR>
-vnoremap <silent> # :<C-U>
-  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-  \gvy?<C-R><C-R>=substitute(
-  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-  \gV:call setreg('"', old_reg, old_regtype)<CR>
+"==
+" Keys Maps
+"==
+nnoremap <leader>nt :call OpenOrFocusNERDTree()<CR>
+nnoremap <leader>ss :setlocal spell!<cr>
+nnoremap <leader>rl :s/<C-r><C-w>//g<Left><Left>
+nnoremap <leader>vs :vsplit<CR>
+nnoremap <leader>vs :vsplit<CR>
+nnoremap <leader>tb :TagbarOpen j<CR>
+nnoremap <leader>hl :noh<CR>
+nnoremap <space> i <Esc>
+nnoremap <S-CR> O<Esc>j
+nnoremap <CR> o<Esc>k
+nnoremap < <<
+nnoremap > >>
+nnoremap  ;  :
+nnoremap  :  ;
+nnoremap <silent> n   n:call HLNext(0.4)<cr>
+nnoremap <silent> N   N:call HLNext(0.4)<cr>
+nnoremap <silent> *   *:call HLNext(0.4)<cr>
+nnoremap <silent> #   #:call HLNext(0.4)<cr>
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+map <C-H> <C-W>h
+vnoremap < <gv
+vnoremap > >gv
 
-"Swapping Splits - http://od-eon.com/blogs/kaunghtet/vim-working-multiple-split-windows/
-function! MarkWindowSwap()
-    let g:markedWinNum = winnr()
+"==
+" Functions
+"==
+"Blink Highlight match
+function! HLNext (blinktime)
+    set invcursorline
+    redraw
+    exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
+    set invcursorline
+    redraw
 endfunction
 
-function! DoWindowSwap()
-    let curNum = winnr()
-    let curBuf = bufnr( "%" )
-    exe g:markedWinNum . "wincmd w"
-    let markedBuf = bufnr( "%" )
-    exe 'hide buf' curBuf
-    exe curNum . "wincmd w"
-    exe 'hide buf' markedBuf
-endfunction
-
-"NerdTree
+"Open Nerdtree, or focus if already open
 function! OpenOrFocusNERDTree ()
   if exists('t:NERDTreeBufName')
     NERDTreeFocus
@@ -84,34 +83,3 @@ function! OpenOrFocusNERDTree ()
     NERDTreeToggle
   endif
 endfunction
-
-"Buffer Stuffs
-set wildchar=<Tab> wildmenu wildmode=full
-
-"Syntastic
-let g:syntastic_enable_balloons=1
-
-"Powerline
-let g:Powerline_stl_path_style = 'full'
-
-"Keys Maps
-  nmap <leader>vs :vert sb<space>
-  map <silent> <F9> :TagbarOpen j<CR>
-  map <F3> :buffers<CR>:buffer<Space>
-  map <F5> :GundoToggle<CR>
-  map <silent> <F2> :call OpenOrFocusNERDTree()<CR>
-  nnoremap <space> i <Esc>
-  nmap <S-CR> O<Esc>j
-  nmap <CR> o<Esc>k
-  nmap <leader>ss :setlocal spell!<cr>
-  nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
-  nmap <silent> <leader>pw :call DoWindowSwap()<CR>
-  nmap <leader>r :s/<C-r><C-w>//g<Left><Left>
-  "Easier moving in tabs and windows
-  map <C-J> <C-W>j
-  map <C-K> <C-W>k
-  map <C-L> <C-W>l
-  map <C-H> <C-W>h
-  "Visual shifting (does not exit Visual mode)
-  vnoremap < <gv
-  vnoremap > >gv
