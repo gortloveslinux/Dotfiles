@@ -23,6 +23,7 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 set wildchar=<Tab> wildmenu wildmode=full
+colorscheme desert
 syntax on
 filetype plugin on
 let mapleader = ","
