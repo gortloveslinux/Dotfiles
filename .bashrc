@@ -11,7 +11,3 @@ PATH=~/bin:$PATH
 # Load functions
 [[ -f ~/bin/to/to.sh ]] && source ~/bin/to/to.sh
 [[ -f ~/bin/functions.sh ]] && source ~/bin/functions.sh
-
-# load xresources
-#which xrdb > /dev/null 2>&1 /dev/null && [[ -f ~/.rxvtrc ]] && xrdb ~/.rxvtrc 
-$(which xrdb) > /dev/null 2>&1 /dev/null && [[ -f ~/.rxvtrc ]] && xrdb ~/.rxvtrc
