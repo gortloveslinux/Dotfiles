@@ -23,6 +23,8 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 set wildchar=<Tab> wildmenu wildmode=full
+set foldmethod=manual
+set foldcolumn=2
 colorscheme desert
 syntax on
 filetype plugin on
@@ -40,6 +42,7 @@ let g:syntastic_enable_balloons=1
 " Keys Maps
 "==
 nnoremap <leader>nt :call OpenOrFocusNERDTree()<CR>
+nnoremap <leader>ct :NERDTreeClose<CR>
 nnoremap <leader>ss :setlocal spell!<cr>
 nnoremap <leader>rl :s/<C-r><C-w>//g<Left><Left>
 nnoremap <leader>vs :vsplit<CR>
@@ -53,14 +56,15 @@ nnoremap < <<
 nnoremap > >>
 nnoremap  ;  :
 nnoremap  :  ;
-nnoremap <silent> n   n:call HLNext(0.4)<cr>
-nnoremap <silent> N   N:call HLNext(0.4)<cr>
-nnoremap <silent> *   *:call HLNext(0.4)<cr>
-nnoremap <silent> #   #:call HLNext(0.4)<cr>
+nnoremap <silent> n   n:call HLNext(0.4)<CR>
+nnoremap <silent> N   N:call HLNext(0.4)<CR>
+nnoremap <silent> *   *:call HLNext(0.4)<CR>
+nnoremap <silent> #   #:call HLNext(0.4)<CR>
 map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-L> <C-W>l
 map <C-H> <C-W>h
+noremap <C-n> :call NumberToggle()<CR>
 vnoremap < <gv
 vnoremap > >gv
 
@@ -82,5 +86,14 @@ function! OpenOrFocusNERDTree ()
     NERDTreeFocus
   else
     NERDTreeToggle
+  endif
+endfunction
+
+"Toggle between releative and absolute line numbering
+function! NumberToggle ()
+  if (&relativenumber == 1)
+    set number
+  else
+    set relativenumber
   endif
 endfunction
