@@ -45,8 +45,6 @@ nnoremap <leader>nt :call OpenOrFocusNERDTree()<CR>
 nnoremap <leader>ct :NERDTreeClose<CR>
 nnoremap <leader>ss :setlocal spell!<cr>
 nnoremap <leader>rl :s/<C-r><C-w>//g<Left><Left>
-nnoremap <leader>vs :vsplit<CR>
-nnoremap <leader>hs :split<CR>
 nnoremap <leader>tb :TagbarOpen j<CR>
 nnoremap <leader>hl :noh<CR>
 nnoremap <space> i <Esc>

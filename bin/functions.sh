@@ -1,4 +1,12 @@
-function rainbow-road {
+#!/bin/bash
+
+# this scripts location
+DIR=$(dirname $(readlink -f "${BASH_SOURCE[0]}"))
+
+# source the to function
+. $DIR/to/to.sh
+
+function tail-rainbow {
   i=$(( 1 ))
   tail -f ${@} | while read line; do
     trap 'tput sgr0 && exit 1' INT
