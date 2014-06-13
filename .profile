@@ -1,9 +1,6 @@
-# Run System profile
-. /etc/profile
-
-# Run personal script
-[[ -f ~/.bashrc ]] && source ~/.bashrc
-
-export TERM=xterm-256color
+export TERM=xterm-color
 export INPUTRC=~/.inputrc
+export GREP_OPTIONS=--color=auto
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
 unset TMOUT
