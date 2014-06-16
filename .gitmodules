@@ -66,6 +66,3 @@
 	path = .vim/bundle/vim-bad-whitespace
 	url = https://github.com/bitc/vim-bad-whitespace.git
     ignore = dirty
-[submodule ".vim/bundle/vimtail"]
-	path = .vim/bundle/vimtail
-	url = https://github.com/vim-scripts/tailtab.vim.git
