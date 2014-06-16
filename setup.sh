@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES=".vim .config .bash_profile .bashrc .profile .bash_aliases bin"
+FILES=".vim .vimrc .config .bash_profile .bashrc .profile .bash_aliases bin"
 
 BACKUP=~/.dotfile_bac.tar
 
