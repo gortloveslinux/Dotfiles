@@ -1,5 +1,14 @@
 ##
-alias ls='ls'
+
+# Test if ls
+#ls --version > /dev/null 2>&1 
+#if [ "0" -eq "${?}" ]; then
+#  color_options="--color=auto"
+#else
+#  color_options=""
+#fi
+
+alias ls="ls $(ls --version > /dev/null 2>&1 && echo '--color=auto')"
 alias ll='ls -alF'
 alias la='ls -A'
 alias sl='ls'

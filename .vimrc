@@ -65,10 +65,13 @@ map <C-H> <C-W>h
 nnoremap th :tabnext<CR>
 nnoremap tl :tabprev<CR>
 nnoremap tn :tabnew<CR>
-noremap <C-n> :call NumberToggle()<CR>
 vnoremap < <gv
 vnoremap > >gv
 nnoremap <leader>? :set cursorline!<CR><Bar>:exec 'sleep ' . float2nr(0.2 * 1000) . 'm'<CR><Bar>:set cursorline!<CR>
+vnoremap <leader>r :w !
+if v:version < 703
+  noremap <C-n> :call NumberToggle()<CR>
+endif
 
 "==
 " Functions
