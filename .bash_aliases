@@ -13,8 +13,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias sl='ls'
 
-alias t='tree -L 2'
-
 alias v='vim'
 alias gv='gvim'
 
@@ -28,4 +26,6 @@ alias tb='to -b'
 alias tr='to -r'
 
 alias serve='python -m SimpleHTTPServer'
+
+alias t='~/bin/todo.txt/todo.sh -t -c -n'
 ##
