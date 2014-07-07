@@ -1,5 +1,8 @@
 #!/bin/bash
 
-FILES=".todo.cfg .inputrc .vim .vimrc .config .bash_profile .bashrc .profile .bash_aliases bin"
+WORKING_DIR=$(dirname $0)/
+ME=$(basename $0)
 
-rsync -a $FILES ~
+git submodule init && git submodule update
+
+rsync -a --exclude=.git* --exclude=${ME} $WORKING_DIR ~
