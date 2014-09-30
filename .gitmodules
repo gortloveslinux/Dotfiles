@@ -10,25 +10,9 @@
 	path = .vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
     ignore = dirty
-[submodule ".vim/bundle/tagbar"]
-	path = .vim/bundle/tagbar
-	url = git://github.com/majutsushi/tagbar.git
-    ignore = dirty
-[submodule ".vim/bundle/supertab"]
-	path = .vim/bundle/supertab
-	url = git://github.com/ervandew/supertab.git
-    ignore = dirty
 [submodule ".vim/bundle/closetag"]
 	path = .vim/bundle/closetag
 	url = git://github.com/docunext/closetag.vim.git
-    ignore = dirty
-[submodule ".vim/bundle/tabular"]
-	path = .vim/bundle/tabular
-	url = git://github.com/godlygeek/tabular.git
-    ignore = dirty
-[submodule ".vim/bundle/vcscomand"]
-	path = .vim/bundle/vcscomand
-	url = git://repo.or.cz/vcscommand
     ignore = dirty
 [submodule ".vim/bundle/phpdoc"]
 	path = .vim/bundle/phpdoc
@@ -53,10 +37,6 @@
 [submodule ".vim/bundle/vim-easymotion"]
 	path = .vim/bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
-    ignore = dirty
-[submodule "bin/to"]
-	path = bin/to
-	url = https://github.com/resultsreturned/to.git
     ignore = dirty
 [submodule ".vim/bundle/vim-commentary"]
 	path = .vim/bundle/vim-commentary
