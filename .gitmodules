@@ -1,48 +1,48 @@
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
+[submodule "vim/.vim/bundle/nerdtree"]
+	path = vim/.vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
     ignore = dirty
-[submodule ".vim/bundle/pathogen"]
-	path = .vim/bundle/pathogen
+[submodule "vim/.vim/bundle/pathogen"]
+	path = vim/.vim/bundle/pathogen
 	url = git://github.com/tpope/vim-pathogen.git
     ignore = dirty
-[submodule ".vim/bundle/vim-surround"]
-	path = .vim/bundle/vim-surround
+[submodule "vim/.vim/bundle/vim-surround"]
+	path = vim/.vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
     ignore = dirty
-[submodule ".vim/bundle/closetag"]
-	path = .vim/bundle/closetag
+[submodule "vim/.vim/bundle/closetag"]
+	path = vim/.vim/bundle/closetag
 	url = git://github.com/docunext/closetag.vim.git
     ignore = dirty
-[submodule ".vim/bundle/phpdoc"]
-	path = .vim/bundle/phpdoc
+[submodule "vim/.vim/bundle/phpdoc"]
+	path = vim/.vim/bundle/phpdoc
 	url = git://github.com/h2rd/vim-phpdoc.git
     ignore = dirty
-[submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
+[submodule "vim/.vim/bundle/syntastic"]
+	path = vim/.vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
     ignore = dirty
-[submodule ".vim/bundle/itchy"]
-	path = .vim/bundle/itchy
+[submodule "vim/.vim/bundle/itchy"]
+	path = vim/.vim/bundle/itchy
 	url = https://github.com/programble/itchy.vim.git
     ignore = dirty
-[submodule ".vim/bundle/vim-coffee-script"]
-	path = .vim/bundle/vim-coffee-script
+[submodule "vim/.vim/bundle/vim-coffee-script"]
+	path = vim/.vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
     ignore = dirty
-[submodule ".vim/bundle/vim-markdown"]
-	path = .vim/bundle/vim-markdown
+[submodule "vim/.vim/bundle/vim-markdown"]
+	path = vim/.vim/bundle/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
     ignore = dirty
-[submodule ".vim/bundle/vim-easymotion"]
-	path = .vim/bundle/vim-easymotion
+[submodule "vim/.vim/bundle/vim-easymotion"]
+	path = vim/.vim/bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
     ignore = dirty
-[submodule ".vim/bundle/vim-commentary"]
-	path = .vim/bundle/vim-commentary
+[submodule "vim/.vim/bundle/vim-commentary"]
+	path = vim/.vim/bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
     ignore = dirty
-[submodule ".vim/bundle/vim-bad-whitespace"]
-	path = .vim/bundle/vim-bad-whitespace
+[submodule "vim/.vim/bundle/vim-bad-whitespace"]
+	path = vim/.vim/bundle/vim-bad-whitespace
 	url = https://github.com/bitc/vim-bad-whitespace.git
     ignore = dirty
