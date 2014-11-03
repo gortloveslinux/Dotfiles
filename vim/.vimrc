@@ -25,6 +25,7 @@ set guioptions-=r
 set wildchar=<Tab> wildmenu wildmode=full
 set foldmethod=manual
 set foldcolumn=2
+set laststatus=2
 colorscheme desert
 syntax on
 filetype plugin on
