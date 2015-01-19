@@ -52,3 +52,6 @@
 [submodule "vim/.vim/bundle/supertab"]
 	path = vim/.vim/bundle/supertab
 	url = https://github.com/ervandew/supertab
+[submodule "vim/.vim/bundle/vim-todotxt"]
+	path = vim/.vim/bundle/vim-todotxt
+	url = https://github.com/freitass/todo.txt-vim.git
