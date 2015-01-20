@@ -6,6 +6,7 @@ call pathogen#helptags()
 "==
 " Settings
 "==
+set dir=/tmp
 set ignorecase
 set smartcase
 set noerrorbells
@@ -103,3 +104,6 @@ function! NumberToggle ()
     set relativenumber
   endif
 endfunction
+
+"File type stuff
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
