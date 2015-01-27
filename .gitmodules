@@ -51,3 +51,6 @@
 [submodule "vim/.vim/bundle/vim-todotxt"]
 	path = vim/.vim/bundle/vim-todotxt
 	url = https://github.com/freitass/todo.txt-vim.git
+[submodule "vim/.vim/bundle/vim-arduino-syntax"]
+	path = vim/.vim/bundle/vim-arduino-syntax
+	url = https://github.com/sudar/vim-arduino-syntax.git
