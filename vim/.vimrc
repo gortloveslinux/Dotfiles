@@ -74,6 +74,8 @@ vnoremap <leader>r :w !
 if v:version < 703
   noremap <C-n> :call NumberToggle()<CR>
 endif
+inoremap jk <Esc>
+nnoremap ! :!
 
 "==
 " Functions
