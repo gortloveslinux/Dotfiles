@@ -39,6 +39,8 @@ call matchadd('ErrorMsg', '\%81v', 100) "Highlight Lines over 80 characters long
 " Plugin Settings
 "==
 let g:syntastic_enable_balloons=1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
 
 "==
 " Keys Maps
@@ -46,7 +48,6 @@ let g:syntastic_enable_balloons=1
 nnoremap <leader>nt :call OpenOrFocusNERDTree()<CR>
 nnoremap <leader>ct :NERDTreeClose<CR>
 nnoremap <leader>ss :setlocal spell!<cr>
-nnoremap <leader>rl :s/<C-r><C-w>//g<Left><Left>
 nnoremap <leader>tb :TagbarOpen j<CR>
 nnoremap <leader>hl :noh<CR>
 nnoremap <space> i <Esc>
@@ -70,10 +71,6 @@ nnoremap tn :tabnew<CR>
 vnoremap < <gv
 vnoremap > >gv
 nnoremap <leader>? :set cursorline!<CR><Bar>:exec 'sleep ' . float2nr(0.2 * 1000) . 'm'<CR><Bar>:set cursorline!<CR>
-vnoremap <leader>r :w !
-if v:version < 703
-  noremap <C-n> :call NumberToggle()<CR>
-endif
 inoremap jk <Esc>
 nnoremap ! :!
 
@@ -95,15 +92,6 @@ function! OpenOrFocusNERDTree ()
     NERDTreeFocus
   else
     NERDTreeToggle
-  endif
-endfunction
-
-"Toggle between releative and absolute line numbering
-function! NumberToggle ()
-  if (&relativenumber == 1)
-    set number
-  else
-    set relativenumber
   endif
 endfunction
 
