@@ -97,3 +97,4 @@ endfunction
 
 "File type stuff
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufReadPost *.pde set filetype=processing
