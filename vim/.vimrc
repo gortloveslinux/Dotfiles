@@ -91,8 +91,16 @@ nnoremap <leader>pm :ProseMode<CR>
 "==
 "File type stuff
 "==
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-autocmd BufNewFile,BufReadPost *.pde set filetype=processing
+augroup filetype_md
+    autocmd!
+    autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+    autocmd BufNewFile,BufReadPost *.md ProseMode
+augroup END
+
+augroup filetype_pde
+    autocmd!
+    autocmd BufNewFile,BufReadPost *.pde set filetype=processing
+augroup END
 
 "==
 " Functions
