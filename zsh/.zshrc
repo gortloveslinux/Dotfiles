@@ -1,4 +1,4 @@
-export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:$PATH"
 source ~/.zsh/antigen/antigen.zsh
 source /etc/profile
 export JAVA_HOME=$(ls -1d /usr/lib/jvm/* | grep java.\*$ | tail -1)
@@ -9,6 +9,7 @@ antigen use oh-my-zsh
 antigen bundle tmux
 antigen bundle git
 antigen bundle vi-mode
+antigen bundle zsh-users/zsh-completions src
 antigen bundle zsh-users/zsh-history-substring-search
 
 antigen theme minimal
