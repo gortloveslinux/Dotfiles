@@ -4,8 +4,26 @@ call pathogen#infect()
 call pathogen#helptags()
 
 "==
+" Plugin Settings
+"==
+let g:syntastic_enable_balloons=1
+
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+
+let g:solarized_termcolors=256
+
+"See http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim for colors
+let g:limelight_conceal_ctermfg = 237
+let g:limelight_conceal_guifg = '#777777'
+
+let g:pencil#wrapModeDefault = 'soft'
+
+"==
 " Settings
 "==
+syntax on
+set background=dark
 set dir=/tmp
 set ignorecase
 set smartcase
@@ -27,25 +45,11 @@ set wildchar=<Tab> wildmenu wildmode=full
 set foldmethod=manual
 set foldcolumn=2
 set laststatus=2
-colorscheme desert
-syntax on
 filetype plugin on
 let mapleader = ","
 let g:mapleader = ","
 call matchadd('ErrorMsg', '\%81v', 100) "Highlight Lines over 80 characters long
-
-
-"==
-" Plugin Settings
-"==
-let g:syntastic_enable_balloons=1
-
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#syntastic#enabled = 1
-
-let g:limelight_conceal_ctermfg = 240
-let g:limelight_conceal_guifg = '#777777'
-let g:limelight_default_coefficient = 0.7
+colorscheme solarized
 
 
 "==
@@ -63,10 +67,10 @@ nnoremap < <<
 nnoremap > >>
 nnoremap  ;  :
 nnoremap  :  ;
-nnoremap <silent> n   n:call HLNext(0.4)<CR>
-nnoremap <silent> N   N:call HLNext(0.4)<CR>
-nnoremap <silent> *   *:call HLNext(0.4)<CR>
-nnoremap <silent> #   #:call HLNext(0.4)<CR>
+nnoremap <silent> n   n:call HLNext(0.2)<CR>
+nnoremap <silent> N   N:call HLNext(0.2)<CR>
+nnoremap <silent> *   *:call HLNext(0.2)<CR>
+nnoremap <silent> #   #:call HLNext(0.2)<CR>
 map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-L> <C-W>l
@@ -74,11 +78,21 @@ map <C-H> <C-W>h
 nnoremap th :tabnext<CR>
 nnoremap tl :tabprev<CR>
 nnoremap tn :tabnew<CR>
+nnoremap tc :tabclose<CR>
+nnoremap bh :bprev<CR>
+nnoremap bl :bnext<CR>
+nnoremap bd :bd<CR>
 vnoremap < <gv
 vnoremap > >gv
-nnoremap <leader>? :set cursorline!<CR><Bar>:exec 'sleep ' . float2nr(0.2 * 1000) . 'm'<CR><Bar>:set cursorline!<CR>
 inoremap jk <Esc>
 nnoremap ! :!
+nnoremap <leader>pm :ProseMode<CR>
+
+"==
+"File type stuff
+"==
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufReadPost *.pde set filetype=processing
 
 "==
 " Functions
@@ -101,19 +115,27 @@ function! OpenOrFocusNERDTree ()
   endif
 endfunction
 
-"File type stuff
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-autocmd BufNewFile,BufReadPost *.pde set filetype=processing
-
 "Prose mode
-command! ProseMode call _prose_mode()
-let s:prose_mode = 0
-autocmd User GoyoEnter Limelight
-autocmd User GoyoLeave Limelight!
-function! _prose_mode ()
-  if s:prose_mode
-    Goyo!
-  else
-    Goyo
+command! ProseMode :Goyo
+function! s:goyo_enter()
+  if has('gui_running')
+    set fullscreen
+  elseif exists('$TMUX')
+    silent !tmux set status off
   endif
+  Pencil
+  Limelight
 endfunction
+function! s:goyo_leave()
+  if has('gui_running')
+    set nofullscreen
+  elseif exists('$TMUX')
+    silent !tmux set status on
+  endif
+  set background=dark
+  colorscheme solarized
+  Limelight!
+  NoPencil
+endfunction
+autocmd User GoyoEnter nested call <SID>goyo_enter()
+autocmd User GoyoLeave nested call <SID>goyo_leave()
