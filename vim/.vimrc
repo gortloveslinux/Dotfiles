@@ -39,8 +39,14 @@ call matchadd('ErrorMsg', '\%81v', 100) "Highlight Lines over 80 characters long
 " Plugin Settings
 "==
 let g:syntastic_enable_balloons=1
+
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
+
+let g:limelight_conceal_ctermfg = 240
+let g:limelight_conceal_guifg = '#777777'
+let g:limelight_default_coefficient = 0.7
+
 
 "==
 " Keys Maps
@@ -98,3 +104,16 @@ endfunction
 "File type stuff
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.pde set filetype=processing
+
+"Prose mode
+command! ProseMode call _prose_mode()
+let s:prose_mode = 0
+autocmd User GoyoEnter Limelight
+autocmd User GoyoLeave Limelight!
+function! _prose_mode ()
+  if s:prose_mode
+    Goyo!
+  else
+    Goyo
+  endif
+endfunction
