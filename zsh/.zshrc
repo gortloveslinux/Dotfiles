@@ -1,5 +1,7 @@
 export PATH="/usr/local/bin:$PATH"
 source ~/.zsh/antigen/antigen.zsh
+source /etc/profile
+export JAVA_HOME=$(ls -1d /usr/lib/jvm/* | grep java.\*$ | tail -1)
 
 antigen use oh-my-zsh
 
