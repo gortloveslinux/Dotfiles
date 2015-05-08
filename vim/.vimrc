@@ -23,6 +23,7 @@ let g:pencil#wrapModeDefault = 'soft'
 " Settings
 "==
 syntax on
+filetype plugin on
 set background=dark
 set dir=/tmp
 set ignorecase
@@ -36,21 +37,19 @@ set nu
 set tabstop=2
 set sw=2
 set history=1000
-set gfn=MonoSpace\ 8
 set t_Co=256
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
+set gfn=MonoSpace\ 8
 set wildchar=<Tab> wildmenu wildmode=full
 set foldmethod=manual
 set foldcolumn=2
 set laststatus=2
-filetype plugin on
 let mapleader = ","
 let g:mapleader = ","
 call matchadd('ErrorMsg', '\%81v', 100) "Highlight Lines over 80 characters long
 colorscheme solarized
-
 
 "==
 " Keys Maps
@@ -71,42 +70,28 @@ nnoremap <silent> n   n:call HLNext(0.2)<CR>
 nnoremap <silent> N   N:call HLNext(0.2)<CR>
 nnoremap <silent> *   *:call HLNext(0.2)<CR>
 nnoremap <silent> #   #:call HLNext(0.2)<CR>
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-map <C-L> <C-W>l
-map <C-H> <C-W>h
 nnoremap th :tabnext<CR>
 nnoremap tl :tabprev<CR>
 nnoremap tn :tabnew<CR>
 nnoremap tc :tabclose<CR>
-nnoremap bh :bprev<CR>
-nnoremap bl :bnext<CR>
-nnoremap bd :bd<CR>
+nnoremap fh :bprev<CR>
+nnoremap fl :bnext<CR>
+nnoremap fd :bd<CR>
+nnoremap ! :!
+nnoremap gy :Goyo<CR>
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+map <C-H> <C-W>h
 vnoremap < <gv
 vnoremap > >gv
 inoremap jk <Esc>
-nnoremap ! :!
-nnoremap <leader>pm :ProseMode<CR>
-
-"==
-"File type stuff
-"==
-augroup filetype_md
-    autocmd!
-    autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-    autocmd BufNewFile,BufReadPost *.md ProseMode
-augroup END
-
-augroup filetype_pde
-    autocmd!
-    autocmd BufNewFile,BufReadPost *.pde set filetype=processing
-augroup END
 
 "==
 " Functions
 "==
 "Blink Highlight match
-function! HLNext (blinktime)
+function! HLNext(blinktime)
     set invcursorline
     redraw
     exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
@@ -115,7 +100,7 @@ function! HLNext (blinktime)
 endfunction
 
 "Open Nerdtree, or focus if already open
-function! OpenOrFocusNERDTree ()
+function! OpenOrFocusNERDTree()
   if exists('t:NERDTreeBufName')
     NERDTreeFocus
   else
@@ -124,7 +109,6 @@ function! OpenOrFocusNERDTree ()
 endfunction
 
 "Prose mode
-command! ProseMode :Goyo
 function! s:goyo_enter()
   if has('gui_running')
     set fullscreen
@@ -147,3 +131,16 @@ function! s:goyo_leave()
 endfunction
 autocmd User GoyoEnter nested call <SID>goyo_enter()
 autocmd User GoyoLeave nested call <SID>goyo_leave()
+
+"==
+"File type stuff
+"==
+augroup filetype_md
+    autocmd!
+    autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+augroup END
+
+augroup filetype_pde
+    autocmd!
+    autocmd BufNewFile,BufReadPost *.pde set filetype=processing
+augroup END
