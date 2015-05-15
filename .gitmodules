@@ -78,3 +78,6 @@
 [submodule "vim/.vim/bundle/pencil"]
 	path = vim/.vim/bundle/pencil
 	url = https://github.com/reedes/vim-pencil.git
+[submodule "vim/.vim/bundle/sbd"]
+	path = vim/.vim/bundle/sbd
+	url = https://github.com/cespare/vim-sbd.git

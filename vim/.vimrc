@@ -66,10 +66,10 @@ nnoremap < <<
 nnoremap > >>
 nnoremap  ;  :
 nnoremap  :  ;
-nnoremap <silent> n   n:call HLNext(0.2)<CR>
-nnoremap <silent> N   N:call HLNext(0.2)<CR>
-nnoremap <silent> *   *:call HLNext(0.2)<CR>
-nnoremap <silent> #   #:call HLNext(0.2)<CR>
+nnoremap <silent> n  n:call HLNext(0.2)<CR>
+nnoremap <silent> N  N:call HLNext(0.2)<CR>
+nnoremap <silent> *  *:call HLNext(0.2)<CR>
+nnoremap <silent> #  #:call HLNext(0.2)<CR>
 nnoremap th :tabnext<CR>
 nnoremap tl :tabprev<CR>
 nnoremap tn :tabnew<CR>
@@ -79,6 +79,8 @@ nnoremap fl :bnext<CR>
 nnoremap fd :bd<CR>
 nnoremap ! :!
 nnoremap gy :Goyo<CR>
+nnoremap <silent> <leader>bd :Sbd<CR>
+nnoremap <silent> <leader>mbd :Sbdm<CR>
 map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-L> <C-W>l
