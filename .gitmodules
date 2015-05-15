@@ -45,39 +45,52 @@
 [submodule "vim/.vim/bundle/vim-airline"]
 	path = vim/.vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline.git
+    ignore = dirty
 [submodule "vim/.vim/bundle/supertab"]
 	path = vim/.vim/bundle/supertab
 	url = https://github.com/ervandew/supertab
+    ignore = dirty
 [submodule "vim/.vim/bundle/vim-todotxt"]
 	path = vim/.vim/bundle/vim-todotxt
 	url = https://github.com/freitass/todo.txt-vim.git
+    ignore = dirty
 [submodule "vim/.vim/bundle/vim-arduino-syntax"]
 	path = vim/.vim/bundle/vim-arduino-syntax
 	url = https://github.com/sudar/vim-arduino-syntax.git
+    ignore = dirty
 [submodule "vim/.vim/bundle/vim-fugitive"]
 	path = vim/.vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+    ignore = dirty
 [submodule "zsh/.zsh/antigen"]
 	path = zsh/.zsh/antigen
 	url = https://github.com/zsh-users/antigen.git
+    ignore = dirty
 [submodule "vim/.vim/bundle/vim-processing"]
 	path = vim/.vim/bundle/vim-processing
 	url = https://github.com/sophacles/vim-processing.git
+    ignore = dirty
 [submodule "vim/.vim/bundle/limelight"]
 	path = vim/.vim/bundle/limelight
 	url = https://github.com/junegunn/limelight.vim.git
+    ignore = dirty
 [submodule "vim/.vim/bundle/goyo"]
 	path = vim/.vim/bundle/goyo
 	url = https://github.com/junegunn/goyo.vim.git
+    ignore = dirty
 [submodule "vim/.vim/bundle/lexical"]
 	path = vim/.vim/bundle/lexical
 	url = https://github.com/reedes/vim-lexical.git
+    ignore = dirty
 [submodule "vim/.vim/bundle/solarized"]
 	path = vim/.vim/bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+    ignore = dirty
 [submodule "vim/.vim/bundle/pencil"]
 	path = vim/.vim/bundle/pencil
 	url = https://github.com/reedes/vim-pencil.git
+    ignore = dirty
 [submodule "vim/.vim/bundle/sbd"]
 	path = vim/.vim/bundle/sbd
 	url = https://github.com/cespare/vim-sbd.git
+    ignore = dirty
