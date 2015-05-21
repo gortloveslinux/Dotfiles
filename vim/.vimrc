@@ -70,13 +70,13 @@ nnoremap <silent> n  n:call HLNext(0.2)<CR>
 nnoremap <silent> N  N:call HLNext(0.2)<CR>
 nnoremap <silent> *  *:call HLNext(0.2)<CR>
 nnoremap <silent> #  #:call HLNext(0.2)<CR>
-nnoremap th :tabnext<CR>
-nnoremap tl :tabprev<CR>
+nnoremap tl :tabnext<CR>
+nnoremap th :tabprev<CR>
 nnoremap tn :tabnew<CR>
 nnoremap tc :tabclose<CR>
 nnoremap fh :bprev<CR>
 nnoremap fl :bnext<CR>
-nnoremap fd :bd<CR>
+nnoremap fd :Sbd<CR>
 nnoremap ! :!
 nnoremap gy :Goyo<CR>
 nnoremap <silent> <leader>bd :Sbd<CR>
