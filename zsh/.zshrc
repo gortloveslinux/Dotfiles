@@ -1,4 +1,5 @@
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
 source ~/.zsh/antigen/antigen.zsh
 source /etc/profile
 export JAVA_HOME=$(ls -1d /usr/lib/jvm/* | grep java.\*$ | tail -1)
