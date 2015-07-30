@@ -17,8 +17,6 @@ let g:solarized_termcolors=256
 let g:limelight_conceal_ctermfg = 237
 let g:limelight_conceal_guifg = '#777777'
 
-let g:pencil#wrapModeDefault = 'soft'
-
 "==
 " Settings
 "==
@@ -57,7 +55,6 @@ colorscheme solarized
 nnoremap <leader>nt :call OpenOrFocusNERDTree()<CR>
 nnoremap <leader>ct :NERDTreeClose<CR>
 nnoremap <leader>ss :setlocal spell!<cr>
-nnoremap <leader>tb :TagbarOpen j<CR>
 nnoremap <leader>hl :noh<CR>
 nnoremap <space> i <Esc>
 nnoremap <leader><CR> O<Esc>j
@@ -88,6 +85,10 @@ map <C-H> <C-W>h
 vnoremap < <gv
 vnoremap > >gv
 inoremap jk <Esc>
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
 
 "==
 " Functions
@@ -117,7 +118,6 @@ function! s:goyo_enter()
   elseif exists('$TMUX')
     silent !tmux set status off
   endif
-  Pencil
   Limelight
 endfunction
 function! s:goyo_leave()
@@ -129,7 +129,6 @@ function! s:goyo_leave()
   set background=dark
   colorscheme solarized
   Limelight!
-  NoPencil
 endfunction
 autocmd User GoyoEnter nested call <SID>goyo_enter()
 autocmd User GoyoLeave nested call <SID>goyo_leave()
