@@ -15,7 +15,6 @@ let g:airline#extensions#syntastic#enabled = 1
 "==
 syntax on
 filetype plugin on
-set background=dark
 set dir=/tmp
 set ignorecase
 set smartcase
@@ -28,16 +27,13 @@ set nu
 set tabstop=2
 set sw=2
 set history=1000
-set t_Co=256
-set gfn=MonoSpace\ 8
 set wildchar=<Tab> wildmenu wildmode=full
 set foldmethod=manual
 set foldcolumn=2
 set laststatus=2
 let mapleader = ","
 let g:mapleader = ","
-call matchadd('ErrorMsg', '\%81v', 100) "Highlight Lines over 80 characters long
-colorscheme solarized
+colorscheme morning
 
 "==
 " Keys Maps
@@ -56,12 +52,10 @@ nnoremap tl :tabnext<CR>
 nnoremap th :tabprev<CR>
 nnoremap tn :tabnew<CR>
 nnoremap tc :tabclose<CR>
-nnoremap <silent> <leader>bd :Sbd<CR>
-nnoremap <silent> <leader>mbd :Sbdm<CR>
 inoremap jk <Esc>
-"nnoremap fh :bprev<CR>
-"nnoremap fl :bnext<CR>
-"nnoremap fd :Sbd<CR>
+nnoremap fh :bprev<CR>
+nnoremap fl :bnext<CR>
+nnoremap fd :Sbd<CR>
 nnoremap ! :!
 map <C-J> <C-W>j
 map <C-K> <C-W>k
