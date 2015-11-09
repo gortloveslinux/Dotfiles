@@ -4,6 +4,8 @@ set dir=/tmp
 set ignorecase
 set smartcase
 set noerrorbells
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set smarttab
 set autoread
@@ -22,7 +24,7 @@ set path=.,**
 set grepprg=grep\ -rnH
 let mapleader = ","
 let g:mapleader = ","
-colorscheme morning
+colorscheme elflord
 
 nnoremap <leader>ss :setlocal spell!<cr>
 nnoremap <space> i <Esc>
