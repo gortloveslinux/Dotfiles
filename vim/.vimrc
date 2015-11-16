@@ -23,14 +23,14 @@ set expandtab
 set nowrap
 set autoread
 set incsearch
-set nu
+set showmode
+set relativenumber
 set tabstop=2
 set sw=2
 set history=1000
 set wildchar=<Tab> wildmenu wildmode=full
 set foldmethod=manual
 set foldcolumn=2
-set laststatus=2
 let mapleader = ","
 let g:mapleader = ","
 colorscheme morning

@@ -18,10 +18,6 @@
 	path = vim/.vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
   ignore = dirty
-[submodule "vim/.vim/bundle/vim-coffee-script"]
-	path = vim/.vim/bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
-  ignore = dirty
 [submodule "vim/.vim/bundle/vim-easymotion"]
 	path = vim/.vim/bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
@@ -29,10 +25,6 @@
 [submodule "vim/.vim/bundle/vim-bad-whitespace"]
 	path = vim/.vim/bundle/vim-bad-whitespace
 	url = https://github.com/bitc/vim-bad-whitespace.git
-  ignore = dirty
-[submodule "vim/.vim/bundle/vim-airline"]
-	path = vim/.vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline.git
   ignore = dirty
 [submodule "vim/.vim/bundle/vim-todotxt"]
 	path = vim/.vim/bundle/vim-todotxt
@@ -53,14 +45,6 @@
 [submodule "vim/.vim/bundle/vim-processing"]
 	path = vim/.vim/bundle/vim-processing
 	url = https://github.com/sophacles/vim-processing.git
-  ignore = dirty
-[submodule "vim/.vim/bundle/solarized"]
-	path = vim/.vim/bundle/solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
-  ignore = dirty
-[submodule "vim/.vim/bundle/sbd"]
-	path = vim/.vim/bundle/sbd
-	url = https://github.com/cespare/vim-sbd.git
   ignore = dirty
 [submodule "vim/.vim/bundle/go"]
 	path = vim/.vim/bundle/go
