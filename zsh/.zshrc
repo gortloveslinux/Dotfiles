@@ -1,9 +1,11 @@
+unsetopt nomatch
+
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=~/Projects/GO/
 source ~/.zsh/antigen/antigen.zsh
 source /etc/profile
-export JAVA_HOME=$(ls -1d /usr/lib/jvm/* | grep java.\*$ | tail -1)
+export JAVA_HOME=$(ls -1d /usr/lib/jvm/* 2> /dev/null | grep java.\*$ | tail -1)
 
 antigen use oh-my-zsh
 
@@ -30,3 +32,6 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/Dropbox/todo/bin"
+
+alias t="todo.sh -d $HOME/Dropbox/todo/bin/todo.cfg"

@@ -33,7 +33,7 @@ set foldmethod=manual
 set foldcolumn=2
 let mapleader = ","
 let g:mapleader = ","
-colorscheme morning
+colorscheme elflord
 
 "==
 " Keys Maps
