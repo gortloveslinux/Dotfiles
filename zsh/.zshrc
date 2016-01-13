@@ -3,9 +3,12 @@ unsetopt nomatch
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=~/Projects/GO/
+export PATH=$GOPATH/bin:$PATH
 source ~/.zsh/antigen/antigen.zsh
 source /etc/profile
 export JAVA_HOME=$(ls -1d /usr/lib/jvm/* 2> /dev/null | grep java.\*$ | tail -1)
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 antigen use oh-my-zsh
 

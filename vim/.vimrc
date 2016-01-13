@@ -10,6 +10,10 @@ let g:syntastic_enable_balloons=1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 
+let g:go_fmt_command = "goimports"
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+
 "==
 " Settings
 "==
@@ -33,7 +37,8 @@ set foldmethod=manual
 set foldcolumn=2
 let mapleader = ","
 let g:mapleader = ","
-colorscheme elflord
+colorscheme monokai
+set laststatus=2
 
 "==
 " Keys Maps
@@ -89,7 +94,5 @@ augroup filetype_pde
     autocmd BufNewFile,BufReadPost *.pde set filetype=processing
 augroup END
 
-au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <leader>t !clear && go test -cover<CR>
