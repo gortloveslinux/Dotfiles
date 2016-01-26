@@ -4,4 +4,4 @@ END=$(date -v +$1 +%s)
 NOW=$(date +%s)
 (( SEC = END - NOW ))
 
-(sleep $SEC && termnotify "Times Up" "It's been $1")&
+(sleep $SEC && termnotify "Time's Up" "It's been $1")&
