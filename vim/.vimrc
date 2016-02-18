@@ -6,13 +6,9 @@ call pathogen#helptags()
 "==
 " Plugin Settings
 "==
-let g:syntastic_enable_balloons=1
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#syntastic#enabled = 1
-
+"let g:syntastic_enable_balloons=1
+"let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_fmt_command = "goimports"
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 "==
 " Settings
@@ -23,6 +19,7 @@ set dir=/tmp
 set ignorecase
 set smartcase
 set noerrorbells
+set vb t_vb=
 set expandtab
 set nowrap
 set autoread
