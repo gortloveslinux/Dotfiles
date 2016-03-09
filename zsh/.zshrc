@@ -5,6 +5,7 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=~/Projects/GO/
 export PATH=$GOPATH/bin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export TERM=xterm-256color
 source ~/.zsh/antigen/antigen.zsh
 source /etc/profile
 export JAVA_HOME=$(ls -1d /usr/lib/jvm/* 2> /dev/null | grep java.\*$ | tail -1)
