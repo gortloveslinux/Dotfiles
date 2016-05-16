@@ -2,7 +2,7 @@ unsetopt nomatch
 
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-export GOPATH=~/Projects/GO/
+export GOPATH=~/projects/GO/
 export PATH=$GOPATH/bin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export TERM=xterm-256color
