@@ -52,8 +52,6 @@ nnoremap <leader>ct :NERDTreeClose<CR>
 nnoremap <leader>ss :setlocal spell!<cr>
 
 nnoremap <space> i <Esc>
-nnoremap <leader><CR> O<Esc>j
-nnoremap <CR> o<Esc>k
 
 nnoremap < <<
 nnoremap > >>
@@ -62,7 +60,6 @@ vnoremap > >gv
 
 nnoremap  ;  :
 nnoremap  :  ;
-noremap <Leader>w :w<CR>
 
 nnoremap tl :tabnext<CR>
 nnoremap th :tabprev<CR>
@@ -102,6 +99,5 @@ endfunction
 "==
 "File type stuff
 "==
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t !clear && go test -cover<CR>
-au FileType go nmap <leader>th !clear && pushd $(dirname $(go test -coverprofile=coverage.out &>/dev/null && go tool cover -html=coverage.out 2>&1 \| awk '{print $5}')); echo "Coverage report: `hostname --fqdn`/coverage.html"; sudo python -m SimpleHTTPServer 80 &>/dev/null; popd<CR>
+au FileType go nmap <leader>t <Plug>(go-test)
+
