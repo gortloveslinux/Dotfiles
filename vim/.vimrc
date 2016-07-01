@@ -16,6 +16,7 @@ call plug#end()
 let g:go_fmt_command = "goimports"
 let g:syntastic_check_on_open = 1
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint', 'govet']
+let g:syntastic_javascript_checkers = ['jsl', 'jshint']
 
 "==
 " Settings
