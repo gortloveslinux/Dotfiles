@@ -1,7 +1,0 @@
-#!/bin/bash
-
-END=$(date -v +$1 +%s)
-NOW=$(date +%s)
-(( SEC = END - NOW ))
-
-(sleep $SEC && termnotify "Time's Up" "It's been $1")&
