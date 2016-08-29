@@ -32,9 +32,8 @@ export KEYTIMEOUT=1
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
-# bind UP and DOWN arrow keys for history search
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-
+zmodload zsh/terminfo
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 
 alias tmux="tmux -2"
