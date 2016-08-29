@@ -1,4 +1,4 @@
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin()
 Plug 'fatih/vim-go'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'scrooloose/syntastic'
@@ -7,6 +7,7 @@ Plug 'bitc/vim-bad-whitespace'
 Plug 'tpope/vim-fugitive'
 Plug 'crusoexia/vim-monokai'
 Plug 'elubow/cql-vim'
+Plug 'tpope/vim-classpath'
 call plug#end()
 
 
