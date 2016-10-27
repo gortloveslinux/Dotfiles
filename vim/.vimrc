@@ -22,6 +22,7 @@ let g:syntastic_javascript_checkers = ['jsl', 'jshint']
 "==
 " Settings
 "==
+set shell=bash
 set dir=/tmp
 set ignorecase
 set smartcase
