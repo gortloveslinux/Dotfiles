@@ -2,9 +2,8 @@ unsetopt nomatch
 
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-export GOPATH=~/projects/GO/
+export GOPATH=~/projects/GO
 export PATH=$GOPATH/bin:$PATH
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export TERM=xterm-256color
 source ~/.zsh/antigen/antigen.zsh
 source /etc/profile
@@ -24,6 +23,8 @@ antigen bundle zsh-users/zsh-history-substring-search
 antigen theme minimal
 
 antigen apply
+
+eval "$(rbenv init -)"
 
 # Set up vim mode
 export KEYTIMEOUT=1
