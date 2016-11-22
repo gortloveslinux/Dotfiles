@@ -23,9 +23,9 @@ let g:syntastic_javascript_checkers = ['jsl', 'jshint']
 "==
 " Settings
 "==
+set path+=**
 set shell=bash
 set dir=/tmp
-set ignorecase
 set smartcase
 set noerrorbells
 set expandtab
@@ -83,6 +83,10 @@ map <C-H> <C-W>h
 nnoremap <leader>ln :lne<CR>
 nnoremap <leader>lp :lp<CR>
 
+"execute buffer
+nnoremap <leader>2 :@"<CR>
+vnoremap <leader>2 y:@"<CR>
+
 "==
 " Commands
 "==
@@ -104,4 +108,3 @@ endfunction
 "File type stuff
 "==
 au FileType go nmap <leader>t <Plug>(go-test)
-
