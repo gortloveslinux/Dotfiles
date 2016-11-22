@@ -8,6 +8,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'crusoexia/vim-monokai'
 Plug 'elubow/cql-vim'
 Plug 'tpope/vim-classpath'
+Plug 'freitass/todo.txt-vim'
 call plug#end()
 
 
