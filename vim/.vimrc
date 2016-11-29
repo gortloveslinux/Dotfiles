@@ -9,6 +9,8 @@ Plug 'crusoexia/vim-monokai'
 Plug 'elubow/cql-vim'
 Plug 'tpope/vim-classpath'
 Plug 'freitass/todo.txt-vim'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 call plug#end()
 
 
@@ -19,6 +21,8 @@ let g:go_fmt_command = "goimports"
 let g:syntastic_check_on_open = 1
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint', 'govet']
 let g:syntastic_javascript_checkers = ['jsl', 'jshint']
+let g:syntastic_php_checkers=['php', 'phpcs']
+let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
 
 "==
 " Settings
@@ -87,6 +91,8 @@ nnoremap <leader>lp :lp<CR>
 nnoremap <leader>2 :@"<CR>
 vnoremap <leader>2 y:@"<CR>
 
+inoremap <silent> date<Tab> <C-R>=strftime("%Y-%m-%d")<CR>
+
 "==
 " Commands
 "==
@@ -104,7 +110,7 @@ function! OpenOrFocusNERDTree()
   endif
 endfunction
 
-"==
 "File type stuff
 "==
-au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <buffer> <leader>t <Plug>(go-test)
+au FileType php setlocal tabstop=4
