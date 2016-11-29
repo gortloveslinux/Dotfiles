@@ -113,4 +113,4 @@ endfunction
 "File type stuff
 "==
 au FileType go nmap <buffer> <leader>t <Plug>(go-test)
-au FileType php setlocal tabstop=4
+au FileType php setlocal tabstop=4 sw=4
