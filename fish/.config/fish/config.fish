@@ -4,7 +4,6 @@ set -gx fish_greeting ''
 set -x EDITOR vim
 set -x NOTES_DIR ~/Dropbox/notes
 
-
 set fish_key_bindings fish_vi_key_bindings
 
 # START git prompt
