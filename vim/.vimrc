@@ -38,8 +38,8 @@ set tabstop=2
 set sw=2
 set history=1000
 set wildchar=<Tab> wildmenu wildmode=full
-set foldmethod=manual
-set foldcolumn=2
+"set foldmethod=manual
+"set foldcolumn=2
 let mapleader = ","
 let g:mapleader = ","
 set laststatus=2
@@ -103,6 +103,17 @@ function! OpenOrFocusNERDTree()
     NERDTreeToggle
   endif
 endfunction
+
+command! Notes call Notes()
+function! Notes()
+  if (empty($NOTES_DIR))
+    echoerr "NOTES_DIR not set. Can't find notes."
+    return 0
+  endif
+  cd $NOTES_DIR
+  e todo/todo.txt
+endfunction
+
 
 "==
 "File type stuff
