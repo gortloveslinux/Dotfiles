@@ -101,7 +101,6 @@ command! W w !sudo tee % > /dev/null
 "==
 " Functions
 "==
-"Open Nerdtree, or focus if already open
 function! OpenOrFocusNERDTree()
   if exists('t:NERDTreeBufName')
     NERDTreeFocus
@@ -122,7 +121,11 @@ endfunction
 
 
 "==
-"File type stuff
+" Auto commands
 "==
-au FileType go nmap <buffer> <leader>t <Plug>(go-test)
-au FileType php setlocal tabstop=4 sw=4
+augroup fileType
+  autocmd!
+  au FileType go nmap <buffer> <leader>t <Plug>(go-test)
+  au FileType markdown setlocal ts=4 sw=4
+  "au FileType php setlocal tabstop=4 sw=4
+augroup END

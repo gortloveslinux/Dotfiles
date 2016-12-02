@@ -1,0 +1,2 @@
+plan|html -s --toc
+pdf|pdf  -V geometry=margin=0.5in -V mainfont=Arial -V fontsize=12pt;
