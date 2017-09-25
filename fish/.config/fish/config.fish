@@ -1,13 +1,17 @@
-. ~/.config/fish/aliases.fish
+. ~/.config/fish/git_aliases.fish
+. ~/.config/fish/general_aliases.fish
 
-set -gx YEAR (date "+%Y")
-set -gx fish_greeting ''
+set -gx fish_greeting 'Hello :)'
 set -x EDITOR vim
-set -x NOTES_DIR ~/Dropbox/notes
-set -x PLAN_FILE $NOTES_DIR/$YEAR/plan.md
-set -x GOPATH ~/projects/go
-set -gx PATH $PATH $GOPATH/bin
+
+if test -d ~/projects/go
+  set -x GOPATH ~/projects/go
+else if test -d ~/Projects/go
+  set -x GOPATH ~/Projects/go
+end
+
 set -gx PATH $PATH /usr/local/go/bin
+set -gx PATH $PATH $GOPATH/bin
 
 set fish_key_bindings fish_vi_key_bindings
 
@@ -47,6 +51,3 @@ function fish_prompt
   set_color normal
 end
 # END git prompt
-
-alias notes "vim -c \"call Notes()\""
-alias plan "vim $PLAN_FILE"
