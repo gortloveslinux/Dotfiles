@@ -8,9 +8,13 @@ if test -d ~/projects/go
   set -x GOPATH ~/projects/go
 else if test -d ~/Projects/go
   set -x GOPATH ~/Projects/go
+else if test -d ~/Projects/GO
+  set -x GOPATH ~/Projects/GO
 end
 
-set -gx PATH $PATH /usr/local/go/bin
+if test -d /usr/local/go/bin
+  set -gx PATH $PATH /usr/local/go/bin
+end
 set -gx PATH $PATH $GOPATH/bin
 
 set fish_key_bindings fish_vi_key_bindings
