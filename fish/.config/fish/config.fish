@@ -17,6 +17,14 @@ if test -d /usr/local/go/bin
 end
 set -gx PATH $PATH $GOPATH/bin
 
+if test -d /opt/local/bin
+  set -gx PATH $PATH /opt/local/bin
+end
+
+if test -d $HOME/bin  
+  set -gx PATH $PATH $HOME/bin
+end
+
 set fish_key_bindings fish_vi_key_bindings
 
 # START git prompt

@@ -19,14 +19,12 @@ call plug#end()
 " Plugin Settings
 "==
 let g:go_fmt_command = "goimports"
+let g:go_fmt_autosave = 1
 let g:go_metalinter_autosave = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_go_checkers = ['golint', 'govet']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-let g:syntastic_go_checkers = ['golint', 'govet', 'gometalinter']
-let g:syntastic_go_gometalinter_args = ['--disable-all', '--enable=errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_list_type = "quickfix"
+
+let g:syntastic_mode_map = { 'passive_filetypes': ['go'] }
+let g:syntastic_check_on_open = 0
 let g:syntastic_javascript_checkers = ['jsl', 'jshint']
 let g:syntastic_php_checkers=['php', 'phpcs']
 let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
