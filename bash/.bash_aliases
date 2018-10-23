@@ -1,7 +1,0 @@
-alias ll='ls -alF'
-alias la='ls -A'
-alias sl='ls'
-alias agrep='ack-grep'
-alias serve='python -m SimpleHTTPServer'
-alias t='todo.sh -d $HOME/Dropbox/todo/todo.cfg'
-alias wiki='cd ~/Wiki; soywiki; cd -'
