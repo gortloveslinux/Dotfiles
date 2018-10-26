@@ -27,7 +27,7 @@ function parse_git_branch() {
 		STAT=`parse_git_dirty`
     if [ ! "${STAT}" == "" ]
     then
-      printf '[\e[33m%s\e[m]' "${BRANCH} ${STAT}"
+      printf '[\e[33m%s\e[m]' "${BRANCH}${STAT}"
     else
       printf '[\e[32m%s\e[m]' ${BRANCH}
     fi
@@ -71,4 +71,4 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\[\e[36m\]\w\[\e[m\] \`parse_git_branch\`\n\[\e[2m\]\D{%F %T}\[\e[m\] \$ "
+export PS1="\[\e[36m\w\[\e[m \`parse_git_branch\` \n\[\e[2m\]\D{%F %T}\[\e[m\] \$ "
