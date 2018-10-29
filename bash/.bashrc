@@ -11,10 +11,12 @@ fi
 if [[ -d $GOPATH/bin ]];then
   PATH=$GOPATH/bin:$PATH
 fi
+if [[ -d /usr/local/go/bin ]];then
+  PATH=$PATH:/usr/local/go/bin
+fi
 
 BASHRC=$HOME/.bashrc
 PATH=/usr/sbin:$PATH
-PATH=$HOME/bin:$PATH
 
 export NOTE_DIR=$HOME/Documents/notes
 export EDITOR=vim
@@ -78,4 +80,4 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\[\e[36m\w\e[m `parse_git_branch` \n\[\e[2m\]\D{%F %T}\[\e[m\] \$ "
+export PS1="\[\e[36m\]\w\[\e[m\] `parse_git_branch` \n\[\e[2m\]\D{%F %T}\[\e[m\] \$ "
