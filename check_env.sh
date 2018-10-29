@@ -14,3 +14,4 @@ function check {
 }
 
 check "fzf" "go get github.com/junegunn/fzf"
+check "ag" "brew install ag / apt-get install silversearcher-ag"

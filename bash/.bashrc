@@ -29,7 +29,7 @@ alias sl='ls'
 alias serve='python -m SimpleHTTPServer'
 alias cdnote='cd $NOTE_DIR'
 
-function parse_git_branch() {
+function parse_git_branch {
 	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 	if [ ! "${BRANCH}" == "" ]
 	then
@@ -38,7 +38,7 @@ function parse_git_branch() {
     then
       printf '[\e[33m%s\e[m]' "${BRANCH}${STAT}"
     else
-      printf '[\e[32m%s\e[m]' ${BRANCH}
+      printf '[\e[32m%s\e[m]' "${BRANCH}"
     fi
 	else
 		echo ""
@@ -80,4 +80,4 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\[\e[36m\]\w\[\e[m\] `parse_git_branch` \n\[\e[2m\]\D{%F %T}\[\e[m\] \$ "
+export PS1='\[\e[36m\]\w\[\e[m\] `parse_git_branch` \n\[\e[2m\]\D{%F %T}\[\e[m\] \$ '
