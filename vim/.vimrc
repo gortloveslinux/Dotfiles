@@ -119,6 +119,9 @@ nnoremap <leader>cdp :call SetProjectRoot()<CR>
 
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+
 
 "==
 " Commands
@@ -168,6 +171,7 @@ endfunction
 augroup fileType
   autocmd!
   au FileType go nmap <buffer> <leader>t <Plug>(go-test)
+  au FileType go nmap <leader>bl <Plug>(go-build)
   au FileType markdown setlocal ts=4 sw=4
   "au FileType php setlocal tabstop=4 sw=4
 augroup END
