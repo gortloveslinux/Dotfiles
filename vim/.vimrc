@@ -29,22 +29,32 @@ let g:syntastic_javascript_checkers = ['jsl', 'jshint']
 let g:syntastic_php_checkers=['php', 'phpcs']
 let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
 let g:tagbar_type_go = {
-    \ 'ctagstype': 'go',
-    \ 'kinds' : [
-      \ 'p:package',
-      \ 'i:imports:1',
-      \ 'c:constants',
-      \ 'v:variables',
-      \ 't:types',
-      \ 'n:interfaces',
-      \ 'w:fields',
-      \ 'e:embedded',
-      \ 'm:methods',
-      \ 'r:constructor',
-      \ 'f:functions'
-    \]
-\}
-
+	\ 'ctagstype' : 'go',
+	\ 'kinds'     : [
+		\ 'p:package',
+		\ 'i:imports:1',
+		\ 'c:constants',
+		\ 'v:variables',
+		\ 't:types',
+		\ 'n:interfaces',
+		\ 'w:fields',
+		\ 'e:embedded',
+		\ 'm:methods',
+		\ 'r:constructor',
+		\ 'f:functions'
+	\ ],
+	\ 'sro' : '.',
+	\ 'kind2scope' : {
+		\ 't' : 'ctype',
+		\ 'n' : 'ntype'
+	\ },
+	\ 'scope2kind' : {
+		\ 'ctype' : 't',
+		\ 'ntype' : 'n'
+	\ },
+	\ 'ctagsbin'  : 'gotags',
+	\ 'ctagsargs' : '-sort -silent'
+\ }
 "==
 " Settings
 "==
@@ -122,7 +132,6 @@ vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
 
-
 "==
 " Commands
 "==
@@ -175,3 +184,4 @@ augroup fileType
   au FileType markdown setlocal ts=4 sw=4
   "au FileType php setlocal tabstop=4 sw=4
 augroup END
+

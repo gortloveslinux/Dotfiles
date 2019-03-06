@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<plist version="1.0">
+
+<dict>
+
+    <key>Label</key>
+
+    <string>com.chris.worklog</string>
+
+    <key>ProgramArguments</key>
+
+    <array>
+
+      <string>/usr/bin/automator</string>
+      <string>/Users/cme/bin/workflows/worklog.workflow/</string>
+
+    </array>
+
+    <key>StartCalendarInterval</key>
+
+    <!-- Every hour from 10 to 4 weekdays -->
+    <array>
+      <dict>
+
+          <!-- Monday -->
+
+          <key>Hour</key>
+
+          <integer>10</integer>
+
+          <key>Weekday</key>
+
+          <integer>1</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>11</integer>
+
+          <key>Weekday</key>
+
+          <integer>1</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>12</integer>
+
+          <key>Weekday</key>
+
+          <integer>1</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>13</integer>
+
+          <key>Weekday</key>
+
+          <integer>1</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>14</integer>
+
+          <key>Weekday</key>
+
+          <integer>1</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>15</integer>
+
+          <key>Weekday</key>
+
+          <integer>1</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>16</integer>
+
+          <key>Weekday</key>
+
+          <integer>1</integer>
+
+      </dict>
+
+      <!-- Tuesday -->
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>10</integer>
+
+          <key>Weekday</key>
+
+          <integer>2</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>11</integer>
+
+          <key>Weekday</key>
+
+          <integer>2</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>12</integer>
+
+          <key>Weekday</key>
+
+          <integer>2</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>13</integer>
+
+          <key>Weekday</key>
+
+          <integer>2</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>14</integer>
+
+          <key>Weekday</key>
+
+          <integer>2</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>15</integer>
+
+          <key>Weekday</key>
+
+          <integer>2</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>16</integer>
+
+          <key>Weekday</key>
+
+          <integer>2</integer>
+
+      </dict>
+
+      <!-- Wednesday -->
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>10</integer>
+
+          <key>Weekday</key>
+
+          <integer>3</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>11</integer>
+
+          <key>Weekday</key>
+
+          <integer>3</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>12</integer>
+
+          <key>Weekday</key>
+
+          <integer>3</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>13</integer>
+
+          <key>Weekday</key>
+
+          <integer>3</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>14</integer>
+
+          <key>Weekday</key>
+
+          <integer>3</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>15</integer>
+
+          <key>Weekday</key>
+
+          <integer>3</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>16</integer>
+
+          <key>Weekday</key>
+
+          <integer>3</integer>
+
+      </dict>
+
+      <!-- Thursday -->
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>10</integer>
+
+          <key>Weekday</key>
+
+          <integer>4</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>11</integer>
+
+          <key>Weekday</key>
+
+          <integer>4</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>12</integer>
+
+          <key>Weekday</key>
+
+          <integer>4</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>13</integer>
+
+          <key>Weekday</key>
+
+          <integer>4</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>14</integer>
+
+          <key>Weekday</key>
+
+          <integer>4</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>15</integer>
+
+          <key>Weekday</key>
+
+          <integer>4</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>16</integer>
+
+          <key>Weekday</key>
+
+          <integer>4</integer>
+
+      </dict>
+
+      <!-- Friday -->
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>10</integer>
+
+          <key>Weekday</key>
+
+          <integer>5</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>11</integer>
+
+          <key>Weekday</key>
+
+          <integer>5</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>12</integer>
+
+          <key>Weekday</key>
+
+          <integer>5</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>13</integer>
+
+          <key>Weekday</key>
+
+          <integer>5</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>14</integer>
+
+          <key>Weekday</key>
+
+          <integer>5</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>15</integer>
+
+          <key>Weekday</key>
+
+          <integer>5</integer>
+
+      </dict>
+
+      <dict>
+
+          <key>Hour</key>
+
+          <integer>16</integer>
+
+          <key>Weekday</key>
+
+          <integer>5</integer>
+
+      </dict>
+
+  </array>
+
+</dict>
+
+</plist>
