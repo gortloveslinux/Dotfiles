@@ -1,0 +1,1 @@
+*/5 9-16 * * 1-5 /Users/cme/bin/screenshot.sh >/tmp/screenshot.log 2>&1
