@@ -12,6 +12,7 @@ Plug 'freitass/todo.txt-vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'majutsushi/tagbar'
+Plug 'aaronbieber/vim-quicktask'
 call plug#end()
 
 

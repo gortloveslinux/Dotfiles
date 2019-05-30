@@ -15,6 +15,8 @@ if [[ -d /usr/local/go/bin ]];then
   PATH=$PATH:/usr/local/go/bin
 fi
 
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
 BASHRC=$HOME/.bashrc
 PATH=/usr/sbin:$PATH
 

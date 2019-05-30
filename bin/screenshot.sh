@@ -13,4 +13,4 @@ mkdir -p $DESTDIR
 /usr/sbin/screencapture -t png -x -D 1 "$TMPFILE1"
 /usr/sbin/screencapture -t png -x -D 2 "$TMPFILE2"
 # combine the screens
-convert "$TMPFILE1" "$TMPFILE2" -background opaque +append -resize 2500 "$DESTDIR/$YMDTZ".png
+/usr/local/bin/convert "$TMPFILE1" "$TMPFILE2" -background opaque +append -resize 2500 "$DESTDIR/$YMDTZ".png
