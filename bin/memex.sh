@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # The ID is intended as a unique identifier for each entry
 generateID(){
   date "+%Y%m%d%H%M%S"
@@ -30,4 +31,24 @@ buildTagFile(){
   local id="$(getID $f)"
   local nf=".$id.tag"
   findTags $f | sed -E "s/$/ $id/" > $nf
+}
+
+# Find todo in the notes with the format of - [<S>] where <S> is an option status of the todo
+findToDos(){
+  local f="$1"
+  set -f
+  local status="${2:-}"
+  echo "s/^- (\[$status\] .*$)/\1/p"
+  sed -n -E "s/^- (\[$status\] .*$)/\1/p" $f
+  set +f
+}
+
+buildToDoFile(){
+  local f="$1"
+  local id="$(getID $f)"
+  local nf=".$id.todo"
+  set -f
+  local status=${2:-'.*'}
+  findToDos $f $status | sed -E "s/$/ $id/" > $nf
+  set +f
 }

@@ -186,3 +186,7 @@ augroup fileType
   "au FileType php setlocal tabstop=4 sw=4
 augroup END
 
+"==
+" MEMEX
+"==
+noremap nj :find \<<C-r><C-w>\>*<CR>
