@@ -6,13 +6,12 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'bitc/vim-bad-whitespace'
 Plug 'tpope/vim-fugitive'
 Plug 'crusoexia/vim-monokai'
-Plug 'elubow/cql-vim'
 Plug 'tpope/vim-classpath'
 Plug 'freitass/todo.txt-vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'majutsushi/tagbar'
-Plug 'aaronbieber/vim-quicktask'
+Plug 'mileszs/ack.vim'
 call plug#end()
 
 
@@ -91,6 +90,8 @@ nnoremap <leader>ct :NERDTreeClose<CR>
 
 nnoremap <leader>ss :setlocal spell!<cr>
 
+nnoremap <Leader>a :Ack!<Space>
+
 nnoremap <space> i <Esc>
 
 nnoremap < <<
@@ -137,6 +138,10 @@ map <C-m> :cprevious<CR>
 " Commands
 "==
 command! W w !sudo tee % > /dev/null
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 "==
 " Functions

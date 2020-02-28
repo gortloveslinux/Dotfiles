@@ -4,7 +4,10 @@ elif [[ -d $HOME/Projects/go ]];then
   export GOPATH=$HOME/Projects/go
 elif [[ -d $HOME/Projects/GO ]];then
   export GOPATH=$HOME/Projects/GO
+elif [[ -d $HOME/go ]];then
+  export GOPATH=$HOME/go
 fi
+
 if [[ -d $HOME/bin ]];then
   PATH=/bin:$PATH
 fi
@@ -29,7 +32,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias sl='ls'
 alias serve='python -m SimpleHTTPServer'
-alias cdnote='cd $NOTE_DIR'
+alias yy="history | tail -2 | head -1 | cut -d' ' -f5- | tr -d '\n' | pbcopy"
 
 function parse_git_branch {
 	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
@@ -83,3 +86,9 @@ function parse_git_dirty {
 }
 
 export PS1='\[\e[36m\]\w\[\e[m\] `parse_git_branch` \n\[\e[2m\]\D{%F %T}\[\e[m\] \$ '
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
