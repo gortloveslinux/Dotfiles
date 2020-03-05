@@ -6,8 +6,6 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'bitc/vim-bad-whitespace'
 Plug 'tpope/vim-fugitive'
 Plug 'crusoexia/vim-monokai'
-Plug 'tpope/vim-classpath'
-Plug 'freitass/todo.txt-vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'majutsushi/tagbar'
