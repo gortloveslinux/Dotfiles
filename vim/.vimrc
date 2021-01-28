@@ -10,12 +10,16 @@ Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-surround'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'markabe/vim-jira-open'
 call plug#end()
 
 
 "==
 " Plugin Settings
 "==
+
 let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 1
 let g:go_metalinter_autosave = 1
@@ -79,6 +83,8 @@ set laststatus=2
 set term=screen-256color
 colorscheme monokai
 
+let g:jira_browse_url = 'https://jira.kount.com/browse/'
+
 
 "==
 " Keys Maps
@@ -88,7 +94,9 @@ nnoremap <leader>ct :NERDTreeClose<CR>
 
 nnoremap <leader>ss :setlocal spell!<cr>
 
-nnoremap <Leader>a :Ack!<Space>
+nnoremap <Leader>a yiw:Ack! <C-r>"<CR>
+
+nnoremap <Leader>cf :let @" = expand("%")<cr>
 
 nnoremap <space> i <Esc>
 
@@ -131,6 +139,13 @@ vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
+
+nnoremap <C-]> g<C-]>
+
+nnoremap <leader>oj :<C-U>call JiraOpen()<CR><CR>
+
+nnoremap <leader>cf :!echo -n % \| pbcopy<CR><CR>
+nnoremap <leader>yf :let @"=expand('%')<CR>
 
 "==
 " Commands
