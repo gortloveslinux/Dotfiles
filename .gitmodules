@@ -2,3 +2,6 @@
   path = zsh/.zsh/antigen
   url = https://github.com/zsh-users/antigen.git
   ignore = dirty
+[submodule "tmux/plugins/tmp"]
+	path = tmux/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
