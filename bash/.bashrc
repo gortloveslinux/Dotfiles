@@ -4,15 +4,15 @@ elif [[ -d $HOME/Projects/go ]];then
   export GOPATH=$HOME/Projects/go
 elif [[ -d $HOME/Projects/GO ]];then
   export GOPATH=$HOME/Projects/GO
-elif [[ -d $HOME/go ]];then
+else
   export GOPATH=$HOME/go
 fi
 
 if [[ -d $HOME/bin ]];then
-  PATH=/bin:$PATH
+  PATH="$HOME/bin:$PATH"
 fi
 if [[ -d $GOPATH/bin ]];then
-  PATH=$GOPATH/bin:$PATH
+  PATH="$GOPATH/bin:$PATH"
 fi
 if [[ -d /usr/local/go/bin ]];then
   PATH=$PATH:/usr/local/go/bin

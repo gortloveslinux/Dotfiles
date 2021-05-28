@@ -82,6 +82,7 @@ let mapleader = ","
 let g:mapleader = ","
 set laststatus=2
 set term=screen-256color
+set tags=./tags;
 colorscheme monokai
 
 let g:jira_browse_url = 'https://jira.kount.com/browse/'
