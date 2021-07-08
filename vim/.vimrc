@@ -13,6 +13,7 @@ Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'markabe/vim-jira-open'
+Plug 'adelarsq/vim-matchit'
 call plug#end()
 
 
@@ -20,12 +21,14 @@ call plug#end()
 " Plugin Settings
 "==
 
-let g:go_fmt_command = "goimports"
+let g:go_fmt_command = 'goimports'
 let g:go_fmt_autosave = 1
-let g:go_metalinter_autosave = 1
-let g:go_list_type = "quickfix"
+let g:go_metalinter_command = "golangci-lint"
+let g:go_metalinter_autosave = 0
+let g:go_list_type = 'quickfix'
 
-let g:syntastic_mode_map = { 'passive_filetypes': ['go'] }
+let g:syntastic_go_gometalinter_args = ['--disable-all']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:syntastic_check_on_open = 0
 let g:syntastic_javascript_checkers = ['jsl', 'jshint']
 let g:syntastic_php_checkers=['php', 'phpcs']

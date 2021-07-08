@@ -17,6 +17,9 @@ fi
 if [[ -d /usr/local/go/bin ]];then
   PATH=$PATH:/usr/local/go/bin
 fi
+if [[ -d /usr/local/opt/binutils/bin ]];then
+  PATH="/usr/local/opt/binutils/bin:$PATH"
+fi
 
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
@@ -88,7 +91,10 @@ function parse_git_dirty {
 export PS1='\[\e[36m\]\w\[\e[m\] `parse_git_branch` \n\[\e[2m\]\D{%F %T}\[\e[m\] \$ '
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
