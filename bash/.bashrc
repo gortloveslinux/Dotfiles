@@ -30,6 +30,7 @@ export NOTE_DIR=$HOME/Documents/notes
 export EDITOR=vim
 
 set -o vi
+export TERM="xterm-256color"
 
 alias ll='ls -alF'
 alias la='ls -A'

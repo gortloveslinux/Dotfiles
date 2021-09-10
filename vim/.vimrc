@@ -5,23 +5,22 @@ Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'bitc/vim-bad-whitespace'
 Plug 'tpope/vim-fugitive'
-Plug 'crusoexia/vim-monokai'
+Plug 'gortloveslinux/vim-monokai'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-surround'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'markabe/vim-jira-open'
 Plug 'adelarsq/vim-matchit'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 
 "==
 " Plugin Settings
 "==
-
-let g:go_fmt_command = 'goimports'
+let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 1
 let g:go_metalinter_command = "golangci-lint"
 let g:go_metalinter_autosave = 0
@@ -142,8 +141,6 @@ vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
-
-nnoremap <C-]> g<C-]>
 
 nnoremap <leader>oj :<C-U>call JiraOpen()<CR><CR>
 
